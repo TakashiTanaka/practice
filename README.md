@@ -1,7 +1,11 @@
 # practiceについて
 
-主にチュートリアルや参考書から学んだ事をアウトプットするGithubページです。
+主にチュートリアルや参考書から学んだ事をアウトプットするリポジトリです。  
+下記、言語別に実装したgithubページを公開しています。
 
-- HTML
-- CSS
-- Javascript
+## HTML
+
+## CSS
+
+## Javascript
+- [おみくじプログラム](https://takashitanaka.github.io/practice/js-practice/omikuji/omikuji.html)
