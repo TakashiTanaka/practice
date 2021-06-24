@@ -10,3 +10,4 @@
 
 ## Javascript
 - [おみくじプログラム](https://takashitanaka.github.io/practice/js-practice/omikuji/omikuji.html)
+- [ビンゴシート作成プログラム](https://takashitanaka.github.io/practice/js-practice/bingo/bingo.html)
