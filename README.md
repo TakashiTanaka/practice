@@ -15,3 +15,6 @@
 - [ビンゴシート作成プログラム](https://takashitanaka.github.io/practice/js-practice/bingo/bingo.html)
 - [モーダルウィンドウ](https://takashitanaka.github.io/practice/js-practice/modalWindow/modalWindow.html)
 <br><br>
+
+## Git
+- [学習記録](https://takashitanaka.github.io/practice/git-practice/)
