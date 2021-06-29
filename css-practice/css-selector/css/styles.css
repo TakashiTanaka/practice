@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+.info {
+	color: skyblue;
+}
+
+#title {
+	color: pink;
+	font-weight: normal;
+}
+
+/* 全称セレクタを使うと、全ての要素に適応される */
+/* * {
+	font-size: 12px;
+} */
+
+/* 指定の属性が付与されている要素のみ適用 */
+[target] {
+	font-weight: bold;
+}
+
+/* 特定の属性の値が付与されている要素のみ適用 */
+[href="#top"] {
+	font-weight: bold;
+}
+
+/* ^を使うと前方一致する要素のみ適用 */
+[href^="https"] {
+	color: red;
+}
+
+/* $を使うと後方一致する要素のみ適用 */
+[href$="ja"] {
+	color: green;
+}
+
+/* *を使うと部分一致する要素のみ適用 */
+[href*="www"] {
+	color: purple;
+}
+
+h1::before,
+h2::before {
+	content: "- ";
+}
+
+h1::after,
+h2::after {
+	/* content: " -"; */
+
+	/* 
+	html要素にカスタムデータ属性を付与した上で、
+	attr()からその値を参照することができる
+	*/
+	content: attr(data-subtitle);
+}
