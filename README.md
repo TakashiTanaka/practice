@@ -8,6 +8,7 @@
 <br><br>
 
 ## CSS
+- [CSS基礎文法編](https://takashitanaka.github.io/practice/css-practice/css-basic/css-basic.html)
 - [チャット風UI](https://takashitanaka.github.io/practice/css-practice/chat-ui/chat-ui.html)
 - [ハートアイコン](https://takashitanaka.github.io/practice/css-practice/heart-icon/heart-icon.html)
 <br><br>
