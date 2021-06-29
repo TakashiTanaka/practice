@@ -9,6 +9,7 @@
 
 ## CSS
 - [チャット風UI](https://takashitanaka.github.io/practice/css-practice/chat-ui/chat-ui.html)
+- [ハートアイコン](https://takashitanaka.github.io/practice/css-practice/heart-icon/heart-icon.html)
 <br><br>
 
 ## Javascript
