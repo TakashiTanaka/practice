@@ -14,6 +14,7 @@
 - [CSSアニメーション編](https://takashitanaka.github.io/practice/css-practice/css-animation/css-animation-main.html)
 - [CSSレスポンシブウェブデザイン編](https://takashitanaka.github.io/practice/css-practice/css-responsive/index.html)
 - [CSSグリッドレイアウト編](https://takashitanaka.github.io/practice/css-practice/css-gridLayout/index.html)
+- [CSS変数編](https://takashitanaka.github.io/practice/css-practice/css-variables/index.html)
 - [チャット風UI](https://takashitanaka.github.io/practice/css-practice/chat-ui/chat-ui.html)
 - [ハートアイコン](https://takashitanaka.github.io/practice/css-practice/heart-icon/heart-icon.html)
 <br><br>
