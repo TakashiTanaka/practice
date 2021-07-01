@@ -1,0 +1,31 @@
+:root {
+	/* ルート疑似要素に変数を定義すると、子要素に継承することができる */
+	--my-color: rgb(88, 144, 255);
+
+	/* 単位は宣言時につけるか、calcで参照先で計算する */
+	/* --my-margin-left: 32px; */
+
+	--my-margin-left: 32;
+}
+
+/* body {
+	--my-color: blue;
+} */
+
+h1 {
+	/* 変数名は大文字小文字を区別する */
+	/* --my-color: blue; */
+
+	/* 変数に値が設定されていなかった時の指定はカンマで区切って指定 */
+	/* color: var(--My-color, orange); */
+
+	color: var(--my-color);
+	border-bottom: 3px solid var(--my-color);
+}
+
+p {
+	color: var(--my-color);
+
+	/* 変数に単位を付けたくない場合、calcで計算する方法もある */
+	margin-left: calc(var(--my-margin-left) * 1px);
+}
