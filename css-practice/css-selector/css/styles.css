@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+.info {
+	color: skyblue;
+}
+
+#title {
+	color: pink;
+	font-weight: normal;
+}
+
+/* 全称セレクタを使うと、全ての要素に適応される */
+/* * {
+	font-size: 12px;
+} */
+
+/* 指定の属性が付与されている要素のみ適用 */
+[target] {
+	font-weight: bold;
+}
+
+/* 特定の属性の値が付与されている要素のみ適用 */
+[href="#top"] {
+	font-weight: bold;
+}
+
+/* ^を使うと前方一致する要素のみ適用 */
+[href^="https"] {
+	color: red;
+}
+
+/* $を使うと後方一致する要素のみ適用 */
+[href$="ja"] {
+	color: green;
+}
+
+/* *を使うと部分一致する要素のみ適用 */
+[href*="www"] {
+	color: purple;
+}
+
+h1::before,
+h2::before {
+	content: "- ";
+}
+
+h1::after,
+h2::after {
+	/* content: " -"; */
+
+	/* 
+	html要素にカスタムデータ属性を付与した上で、
+	attr()からその値を参照することができる
+	*/
+	content: attr(data-subtitle);
+}
+
+.btn {
+	width: 100px;
+	background-color: skyblue;
+	text-align: center;
+	padding: 4px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.btn:hover {
+	opacity: 0.8;
+}
+
+/* main内の3番目の子要素 */
+/* main > :nth-child(3) {
+	background-color: red;
+} */
+
+/* main内の3の倍数番目の子要素 */
+/* main > :nth-child(3n) {
+	background-color: red;
+} */
+
+/* main内の偶数の子要素 */
+/* main > :nth-child(even) {
+	background-color: red;
+} */
+
+/* main内の奇数の子要素 */
+/* main > :nth-child(odd) {
+	background-color: skyblue;
+} */
+
+/* main内の最初の子要素 */
+/* main > :first-child {
+	background-color: red;
+} */
+
+/* main内の最後の子要素 */
+/* main > :last-child {
+	background-color: skyblue;
+} */
+
+/* main内の2番目のh2 */
+/* main > h2:nth-of-type(2) {
+	background-color: red;
+} */
+
+/* main内の偶数番目のh2 */
+/* main > h2:nth-of-type(even) {
+	background-color: red;
+} */
+
+/* main内の最初のh2 */
+main > h2:first-of-type {
+	background-color: red;
+}
+
+/* main内の最後のh2 */
+main > h2:last-of-type {
+	background-color: skyblue;
+}
+
+/* 
+ * 要素内が空のliを選択 
+ * ※半角空白などは空とみなされない、コメントは空とみなされる
+*/
+li:empty {
+	background-color: red;
+}
+
+/* 
+ * 要素内が空ではないliを選択 
+*/
+/* li:not(:empty) {
+	background-color: red;
+} */
+
+/* 
+ * 詳細度
+ * id | class、属性、擬似クラス | 要素、疑似要素
+ */
+
+#about > #main {
+	color: gray;
+}
+h1 {
+	/* 
+	 * !importantを使用すると最も詳細度が高くなるが、
+	 * 乱用すると管理が難しくなる。また、!importantを複数書いた場合は、
+	 * 後に書いた方が優先される
+	 */
+	/* color: red !important; */
+	color: red;
+}
+h1#main.box {
+	color: yellow;
+}
+section > #main.title {
+	color: blue;
+}
+section#about > h1 {
+	color: pink;
+}
