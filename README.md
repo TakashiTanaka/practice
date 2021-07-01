@@ -18,6 +18,7 @@
 - [ビンゴシート作成プログラム](https://takashitanaka.github.io/practice/js-practice/bingo/bingo.html)
 - [モーダルウィンドウ](https://takashitanaka.github.io/practice/js-practice/modalWindow/modalWindow.html)
 - [タブメニュー](https://takashitanaka.github.io/practice/js-practice/tab/tab.html)
+- [Canvas](https://takashitanaka.github.io/practice/js-practice/canvas/canvas.html)
 <br><br>
 
 ## Git

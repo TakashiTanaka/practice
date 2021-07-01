@@ -4,7 +4,7 @@
 Javascript Canvas編を実践しました。
 
 制作物URL  
-https://takashitanaka.github.io/practice/js-practice/modalWindow/modalWindow.html
+https://takashitanaka.github.io/practice/js-practice/canvas/canvas.html
 
 参考URL  
 https://dotinstall.com/lessons/basic_canvas_v3
