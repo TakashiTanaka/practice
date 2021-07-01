@@ -1,0 +1,38 @@
+body {
+	margin: 0;
+}
+
+.container {
+	display: grid;
+
+	grid-template-columns: repeat(3, 100px);
+	grid-template-rows: repeat(4, 100px);
+
+	/* grid-auto-flow: row; */
+	grid-auto-flow: column dense;
+	grid-auto-columns: 100px;
+}
+
+.box1 {
+	background-color: hsl(0, 60%, 60%);
+}
+
+.box2 {
+	background-color: hsl(60, 60%, 60%);
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.box3 {
+	background-color: hsl(120, 60%, 60%);
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.box4 {
+	background-color: hsl(180, 60%, 60%);
+}
+
+.box5 {
+	background-color: hsl(240, 60%, 60%);
+}

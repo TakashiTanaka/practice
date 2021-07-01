@@ -1,0 +1,37 @@
+body {
+	margin: 0;
+}
+
+.container {
+	display: grid;
+
+	grid-template-columns: 100px [target-start] 100px 100px [target-end];
+	/* grid-template-columns: 100px 100px [target-start] 100px [target-end]; */
+	grid-template-rows: 100px 100px;
+}
+
+.box1 {
+	background-color: hsl(0, 60%, 60%);
+	grid-row: 2;
+	/* grid-column: 2 / 4; */
+	/* grid-column: 2 / -1; */
+	/* grid-column: 2 / span 2; */
+	/* grid-column: target-start / target-end; */
+	grid-column: target;
+}
+
+.box2 {
+	background-color: hsl(60, 60%, 60%);
+}
+
+.box3 {
+	background-color: hsl(120, 60%, 60%);
+}
+
+.box4 {
+	background-color: hsl(180, 60%, 60%);
+}
+
+.box5 {
+	background-color: hsl(240, 60%, 60%);
+}

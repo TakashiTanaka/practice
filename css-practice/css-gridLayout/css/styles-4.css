@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+}
+
+.container {
+	display: grid;
+
+	grid-template-columns: repeat(5, 100px);
+	grid-template-rows: repeat(4, 100px);
+
+	/* 
+	 * 配置したくない箇所には.を記述する
+	 * ただ、各範囲が四角になっていないとだめ
+	 */
+	grid-template-areas:
+		"r r r y y"
+		"r r r y y"
+		"c c g y y"
+		"c c b . .";
+}
+
+.box1 {
+	background-color: hsl(0, 60%, 60%);
+	grid-area: r;
+}
+
+.box2 {
+	background-color: hsl(60, 60%, 60%);
+	grid-area: y;
+}
+
+.box3 {
+	background-color: hsl(120, 60%, 60%);
+	grid-area: g;
+}
+
+.box4 {
+	background-color: hsl(180, 60%, 60%);
+	grid-area: c;
+}
+
+.box5 {
+	background-color: hsl(240, 60%, 60%);
+	grid-area: b;
+}
