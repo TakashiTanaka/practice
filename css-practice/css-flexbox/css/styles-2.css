@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+}
+
+header {
+	height: 200px;
+	background-color: silver;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div {
+	width: 100px;
+	height: 40px;
+	background-color: skyblue;
+}
