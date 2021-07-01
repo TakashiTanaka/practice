@@ -1,0 +1,37 @@
+body {
+	padding: 64px;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+
+	/* animation: move; */
+	/* animation-duration: 2s; */
+	/* animation-delay: 1s; */
+	/* animation-fill-mode: forwards; */
+	/* animation-iteration-count: 2; */
+	/* animation-iteration-count: infinite; */
+
+	/* animation-direction: alternate; */
+	/* animation-direction: reverse; */
+	/* animation-direction: alternate-reverse; */
+	/* animation-timing-function: linear; */
+
+	/* 一括指定 */
+	animation: move 2s infinite 1s;
+}
+
+@keyframes move {
+	0% {
+		transform: none;
+		/* animation-timing-function: linear; */
+	}
+	80% {
+		transform: translateX(200px) rotate(360deg);
+	}
+	100% {
+		transform: translateX(300px) rotate(360deg);
+	}
+}
