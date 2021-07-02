@@ -32,3 +32,8 @@
 
 ## Git
 - [学習記録](https://takashitanaka.github.io/practice/git-practice/)
+<br><br>
+
+## Other
+- [Firebaseでwebサイトを公開](https://github.com/TakashiTanaka/practice/blob/main/other/firebase/README.md)
+<br><br>
