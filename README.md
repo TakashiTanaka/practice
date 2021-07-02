@@ -4,10 +4,7 @@
 下記、言語別に実装したgithubページを公開しています。
 <br><br>
 
-## HTML
-<br><br>
-
-## CSS
+## HTML & CSS
 - [CSS基礎文法編](https://takashitanaka.github.io/practice/css-practice/css-basic/css-basic.html)
 - [CSSセレクタ編](https://takashitanaka.github.io/practice/css-practice/css-selector/css-selector.html)
 - [CSSフレックスボックス編](https://takashitanaka.github.io/practice/css-practice/css-flexbox/css-flexbox-main.html)
