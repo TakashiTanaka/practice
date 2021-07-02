@@ -1,0 +1,13 @@
+body {
+	margin: 0;
+	padding: 64px;
+	line-height: 2;
+	letter-spacing: 0.125em;
+	background-color: rgb(47, 47, 47);
+	color: rgb(203, 203, 203);
+	font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+
+a {
+	color: rgb(203, 203, 203);
+}
