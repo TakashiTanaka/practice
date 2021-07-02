@@ -26,6 +26,7 @@
 - [ローディングアイコン](https://takashitanaka.github.io/practice/js-practice/loadingIcon/loadingIcon.html)
 - [ハンバーガーメニュー](https://takashitanaka.github.io/practice/js-practice/humbergerMenu/index.html)
 - [アコーディオンUI](https://takashitanaka.github.io/practice/js-practice/accordion/index.html)
+- [Intersection Observer API](https://takashitanaka.github.io/practice/js-practice/intersectionObserverAPI/index.html)
 <br><br>
 
 ## Git
