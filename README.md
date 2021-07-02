@@ -36,5 +36,5 @@
 
 ## Other
 - [Firebaseでwebサイトを公開](https://github.com/TakashiTanaka/practice/blob/main/other/firebase/README.md)
-- [UNIXコマンド入門](https://github.com/TakashiTanaka/practice/blob/main/other/firebase/README.md)
+- [UNIXコマンド入門](https://takashitanaka.github.io/practice/UNIX-practice/)
 <br><br>
