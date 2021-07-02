@@ -1,0 +1,58 @@
+:root {
+	--theme-color: rgb(224, 209, 70);
+}
+
+body {
+	margin: 100px 0;
+	background-color: rgb(0, 26, 44);
+	color: rgb(193, 193, 193);
+	font-size: 18px;
+	line-height: 1.75;
+
+	/* m */
+	/* margin: 10px; */
+
+	/* p */
+	/* padding: 10px; */
+
+	/* m10 */
+	/* margin: 10px; */
+
+	/* m10p */
+	/* margin: 10%; */
+
+	/* m10r */
+	/* margin: 10rem; */
+
+	/* m10p20p */
+	/* margin: 10% 20%; */
+
+	/* m10-20-30 */
+	/* margin: 10px 20px 30px; */
+
+	/* mb10 */
+	/* margin-bottom: 10px; */
+
+	/* fsz */
+	/* font-size: 20px; */
+
+	/* fwb */
+	/* font-weight: bold; */
+
+	/* posa */
+	/* position: absolute; */
+
+	/* posr */
+	/* position: relative; */
+}
+
+h1,
+h2 {
+	display: inline;
+	color: var(--theme-color);
+	font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体";
+}
+
+pre .emmet {
+	color: var(--theme-color);
+}

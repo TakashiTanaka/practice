@@ -1,0 +1,7 @@
+{
+	"html": {
+		"snippets": {
+			"mt": "<mytag>${1}</mytag>"
+		}
+	}
+}

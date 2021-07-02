@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Emmet記法</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+	<pre>
+		<h1>Emmet記法の練習</h1>
+
+		<h2>- HTML編</h2>
+
+		<span class="emmet">div</span>
+		&lt;div&gt;text&lt;/div&gt;
+
+		<span class="emmet">a</span>
+		&lt;a href=&quot;about.html&quot;&gt;about&lt;/a&gt;
+
+		<span class="emmet">div#target</span>
+		&lt;div id=&quot;target&quot;&gt;&lt;/div&gt;
+
+		<span class="emmet">div.container</span>
+		&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;
+
+		<span class="emmet">div#reset.btn.disabled</span>
+		&lt;div id=&quot;reset&quot; class=&quot;btn disabled&quot;&gt;&lt;/div&gt;
+
+		<span class="emmet">a[title=&quot;My Site&quot;]</span>
+		&lt;a href=&quot;&quot; title=&quot;My Site&quot;&gt;&lt;/a&gt;
+
+		<span class="emmet">div[data-id=&quot;5&quot; title=&quot;My Site&quot;]</span>
+		&lt;div data-id=&quot;5&quot; title=&quot;My Site&quot;&gt;&lt;/div&gt;
+
+		<span class="emmet">p{Hello}</span>
+		&lt;p&gt;Hello&lt;/p&gt;
+
+		<span class="emmet">p*3</span>
+		&lt;p&gt;&lt;/p&gt;
+		&lt;p&gt;&lt;/p&gt;
+		&lt;p&gt;&lt;/p&gt;
+
+		<span class="emmet">div.item*10</span>
+		&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+
+		<span class="emmet">div.item$*5</span>
+		&lt;div class=&quot;item1&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item2&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item3&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item4&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item5&quot;&gt;&lt;/div&gt;
+
+		<span class="emmet">div.item$$$*5</span>
+		&lt;div class=&quot;item001&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item002&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item003&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item004&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item005&quot;&gt;&lt;/div&gt;
+
+		<span class="emmet">div.item$@3*5</span>
+		&lt;div class=&quot;item3&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item4&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item5&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item6&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;item7&quot;&gt;&lt;/div&gt;
+
+		<span class="emmet">main&gt;section*3</span>
+		&lt;main&gt;
+		&lt;section&gt;&lt;/section&gt;
+		&lt;section&gt;&lt;/section&gt;
+		&lt;section&gt;&lt;/section&gt;
+		&lt;/main&gt;
+
+		<span class="emmet">main&gt;section*3+div.btn</span>
+		&lt;main&gt;
+		&lt;section&gt;&lt;/section&gt;
+		&lt;section&gt;&lt;/section&gt;
+		&lt;section&gt;&lt;/section&gt;
+		&lt;div class=&quot;btn&quot;&gt;&lt;/div&gt;
+		&lt;/main&gt;
+
+		<span class="emmet">main&gt;section*3^footer</span>
+		&lt;main&gt;
+		&lt;section&gt;&lt;/section&gt;
+		&lt;section&gt;&lt;/section&gt;
+		&lt;section&gt;&lt;/section&gt;
+		&lt;/main&gt;
+		&lt;footer&gt;&lt;/footer&gt;
+
+		<span class="emmet">ul*2&gt;li*3</span>
+		<span class="emmet">(ul&gt;li*3)*2</span>
+		&lt;ul&gt;
+		&lt;li&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;ul&gt;
+		&lt;li&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+
+		<span class="emmet">.container</span>
+		&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;
+
+		<span class="emmet">ul&gt;.item*5</span>
+		&lt;ul&gt;
+		&lt;li class=&quot;item&quot;&gt;&lt;/li&gt;
+		&lt;li class=&quot;item&quot;&gt;&lt;/li&gt;
+		&lt;li class=&quot;item&quot;&gt;&lt;/li&gt;
+		&lt;li class=&quot;item&quot;&gt;&lt;/li&gt;
+		&lt;li class=&quot;item&quot;&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+
+		<span class="emmet">table&gt;.row*2&gt;.col*4</span>
+		&lt;table&gt;
+		&lt;tr class=&quot;row&quot;&gt;
+		&lt;td class=&quot;col&quot;&gt;&lt;/td&gt;
+		&lt;td class=&quot;col&quot;&gt;&lt;/td&gt;
+		&lt;td class=&quot;col&quot;&gt;&lt;/td&gt;
+		&lt;td class=&quot;col&quot;&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=&quot;row&quot;&gt;
+		&lt;td class=&quot;col&quot;&gt;&lt;/td&gt;
+		&lt;td class=&quot;col&quot;&gt;&lt;/td&gt;
+		&lt;td class=&quot;col&quot;&gt;&lt;/td&gt;
+		&lt;td class=&quot;col&quot;&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;/table&gt;
+
+		<span class="emmet">form:post</span>
+		&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;&lt;/form&gt;
+
+		<span class="emmet">input:t</span>
+		&lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;&quot;&gt;
+
+		<span class="emmet">input:r</span>
+		&lt;input type=&quot;radio&quot; name=&quot;&quot; id=&quot;&quot;&gt;
+
+		<span class="emmet">input:c</span>
+		&lt;input type=&quot;checkbox&quot; name=&quot;&quot; id=&quot;&quot;&gt;
+
+		<span class="emmet">select&gt;[value=&quot;item$&quot;]*5</span>
+		&lt;select name=&quot;&quot; id=&quot;&quot;&gt;
+		&lt;option value=&quot;item1&quot;&gt;&lt;/option&gt;
+		&lt;option value=&quot;item2&quot;&gt;&lt;/option&gt;
+		&lt;option value=&quot;item3&quot;&gt;&lt;/option&gt;
+		&lt;option value=&quot;item4&quot;&gt;&lt;/option&gt;
+		&lt;option value=&quot;item5&quot;&gt;&lt;/option&gt;
+		&lt;/select&gt;
+
+		<span class="emmet">囲いたい範囲を選択 → Shift + ⌘ + P でパレット表示 → wrapと入力 → Wrap with Abbreviationを選択 → 囲いたい要素を入力</span>
+		&lt;div class=&quot;container&quot;&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolores optio, accusamus est maxime
+		nisicommodirecusandae excepturi neque ut quibusdam rem tempore eum, ex provident voluptas culpa ea.
+		Nobis.&lt;/p&gt;
+		&lt;/div&gt;
+
+		<span class="emmet">ul&gt;li*|t</span>
+		&lt;ul&gt;
+		&lt;li&gt;red&lt;/li&gt;
+		&lt;li&gt;blue&lt;/li&gt;
+		&lt;li&gt;pink&lt;/li&gt;
+		&lt;/ul&gt;
+
+		<span class="emmet">画像タグ内でコマンドパレット表示 → updateとすると、upadateImageSizeが表示され、クリック</span>
+		&lt;img src=&quot;img/logo.png&quot; alt=&quot;&quot; width=&quot;650&quot; height=&quot;108&quot;&gt;
+
+		<span class="emmet">画像タグ内でコマンドパレット表示 → evaluateとすると、Evaluate Math Excodessionが表示され、クリック。式が計算される</span>
+		&lt;img src=&quot;img/logo.png&quot; alt=&quot;&quot; width=&quot;650*2&quot; height=&quot;108&quot;&gt;
+
+		<h2>- CSS編</h2>
+
+		<span class="emmet">m</span>
+		margin: 10px;
+
+		<span class="emmet">p</span>
+		padding: 10px;
+
+		<span class="emmet">m10</span>
+		margin: 10px;
+
+		<span class="emmet">m10p</span>
+		margin: 10%;
+
+		<span class="emmet">m10r</span>
+		margin: 10rem;
+
+		<span class="emmet">m10p20p</span>
+		margin: 10% 20%;
+
+		<span class="emmet">m10-20-30</span>
+		margin: 10px 20px 30px;
+
+		<span class="emmet">mb10</span>
+		margin-bottom: 10px;
+
+		<span class="emmet">fsz</span>
+		font-size: 20px;
+
+		<span class="emmet">fwb</span>
+		font-weight: bold;
+
+		<span class="emmet">posa</span>
+		position: absolute;
+
+		<span class="emmet">posr</span>
+		position: relative;
+
+	</pre>
+</body>
+
+</html>
