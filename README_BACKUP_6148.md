@@ -27,8 +27,11 @@
 - [ハンバーガーメニュー](https://takashitanaka.github.io/practice/js-practice/humbergerMenu/index.html)
 - [アコーディオンUI](https://takashitanaka.github.io/practice/js-practice/accordion/index.html)
 - [Intersection Observer API](https://takashitanaka.github.io/practice/js-practice/intersectionObserverAPI/index.html)
+<<<<<<< HEAD
 - [dat.GUI](https://takashitanaka.github.io/practice/js-practice/datGUI/index.html)
+=======
 - [スライドショー](https://takashitanaka.github.io/practice/js-practice/slideShow/index.html)
+>>>>>>> slideShow
 <br><br>
 
 ## Git

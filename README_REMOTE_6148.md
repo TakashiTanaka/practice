@@ -27,16 +27,8 @@
 - [ハンバーガーメニュー](https://takashitanaka.github.io/practice/js-practice/humbergerMenu/index.html)
 - [アコーディオンUI](https://takashitanaka.github.io/practice/js-practice/accordion/index.html)
 - [Intersection Observer API](https://takashitanaka.github.io/practice/js-practice/intersectionObserverAPI/index.html)
-- [dat.GUI](https://takashitanaka.github.io/practice/js-practice/datGUI/index.html)
 - [スライドショー](https://takashitanaka.github.io/practice/js-practice/slideShow/index.html)
 <br><br>
 
 ## Git
 - [学習記録](https://takashitanaka.github.io/practice/git-practice/)
-<br><br>
-
-## Other
-- [Firebaseでwebサイトを公開](https://github.com/TakashiTanaka/practice/blob/main/other/firebase/README.md)
-- [UNIXコマンド入門](https://takashitanaka.github.io/practice/other/UNIX-practice/README.md)
-- [Emmet記法](https://takashitanaka.github.io/practice/other/emmet/index.html)
-<br><br>

@@ -28,7 +28,6 @@
 - [アコーディオンUI](https://takashitanaka.github.io/practice/js-practice/accordion/index.html)
 - [Intersection Observer API](https://takashitanaka.github.io/practice/js-practice/intersectionObserverAPI/index.html)
 - [dat.GUI](https://takashitanaka.github.io/practice/js-practice/datGUI/index.html)
-- [スライドショー](https://takashitanaka.github.io/practice/js-practice/slideShow/index.html)
 <br><br>
 
 ## Git
