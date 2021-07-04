@@ -2,7 +2,6 @@
 
 (function () {
 	'use strict';
-
 	let scene;
 	let box;
 	let plane;
