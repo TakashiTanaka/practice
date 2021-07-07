@@ -33,6 +33,7 @@
 - [カレンダー](https://takashitanaka.github.io/practice/js-practice/calendar/index.html)
 - [three.js](https://takashitanaka.github.io/practice/js-practice/threejs-practice/index.html)
 - [ストップウォッチ](https://takashitanaka.github.io/practice/js-practice/stopWatch/index.html)
+- [タイピングゲーム](https://takashitanaka.github.io/practice/js-practice/typing/index.html)
 <br><br>
 
 ## Git
