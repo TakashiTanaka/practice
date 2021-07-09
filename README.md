@@ -35,6 +35,7 @@
 - [ストップウォッチ](https://takashitanaka.github.io/practice/js-practice/stopWatch/index.html)
 - [タイピングゲーム](https://takashitanaka.github.io/practice/js-practice/typing/index.html)
 - [三択クイズ](https://takashitanaka.github.io/practice/js-practice/quiz/index.html)
+- [スロットマシン](https://takashitanaka.github.io/practice/js-practice/slot/index.html)
 <br><br>
 
 ## Git
