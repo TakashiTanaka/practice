@@ -36,6 +36,7 @@
 - [タイピングゲーム](https://takashitanaka.github.io/practice/js-practice/typing/index.html)
 - [三択クイズ](https://takashitanaka.github.io/practice/js-practice/quiz/index.html)
 - [スロットマシン](https://takashitanaka.github.io/practice/js-practice/slot/index.html)
+- [webpack](https://takashitanaka.github.io/practice/js-practice/webpack/index.html)
 <br><br>
 
 ## Git
