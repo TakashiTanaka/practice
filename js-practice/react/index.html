@@ -18,50 +18,162 @@
 	<script type="text/babel">
 		(() => {
 
-			function Counter(props) {
+			const countUp = (e, color) => {
+				// preventDefaultを使うことでデフォルトの動作を無効化することができる
+				e.preventDefault();
+				alert(color);
+			}
 
-				// function countUp(color) {
-				// 	alert(color);
-				// }
-
-				function countUp(e, color) {
-					e.preventDefault();
-					alert(color);
+			// コンポーネントを関数で定義するパターン
+			{/*
+				const Counter = props => {
+					受け取った値は読み取り専用
+					返したい要素をreturnする
+					return <div>0 {props.color}</div>;
+					return (
+						<li style={{ backgroundColor: props.color }}>
+							<a href="#" onClick={e => countUp(e, props.color)}>
+								0
+							</a>
+						</li>
+					);
 				}
+			*/}
 
-				// return (
-				// 	<li style={{ backgroundColor: props.color }} onClick={countUp}>
-				// 		0
-				// 	</li>
-				// );
+			// React Developer Toolを使うとコンポーネントの情報が見れるようになる
 
-				// return (
-				// 	<li style={{ backgroundColor: props.color }} onClick={() => {
-				// 		countUp(props.color)
-				// 	}}>
-				// 		0
-				// 	</li>
-				// );
+			// コンポーネントをclassで定義するパターン（Stateを使えるようになる）
+			// stateを使うと状態管理ができるようになる
+			{/*
+				class Counter extends React.Component {
+					constructor(props) {
+						// 必ず親クラスのコンストラクタを呼び出す
+						super(props);
+						this.state = {
+							count: 0,
+							// message: 'Hello'
+						};
+						// countUp関数をthisに束縛する
+						this.countUp = this.countUp.bind(this);
+					}
 
+					countUp() {
+						// stateの値を変えるときはsetStateを使わないとだめ
+						// prevStateに直前の値が入っている
+						this.setState(prevState => {
+							return {
+								count: prevState.count + 1
+							};
+						});
+					}
+
+					// 描画したい内容をrender関数の中でreturnする
+					render() {
+						// classの場合はpropsにthisをつけないとだめ
+						return (
+							<li style={{ backgroundColor: this.props.color }} onClick={this.countUp}>
+								{this.state.count}
+							</li>
+						);
+					}
+				}
+			*/}
+
+
+			const Counter = (props) => {
 				return (
-					<li style={{ backgroundColor: props.color }}>
-						<a href="#" onClick={(e) => { countUp(e, props.color) }}>
-							0
-						</a>
-					</li>
+					<li style={{ backgroundColor: props.counter.color }} onClick={() => props.countUp(props.counter)}>
+						{props.counter.id}: {props.counter.count}
+					</li >
 				);
 			}
 
-			ReactDOM.render(
-				<div className="container">
+			const CounterList = (props) => {
+				const counters = props.counters.map(counter => {
+					// ループで処理するような要素にはkeyというユニークな値を持つ属性をつけなきゃだめ
+					return (
+						<Counter
+							counter={counter}
+							key={counter.id}
+							countUp={props.countUp}
+						/>
+					);
+				});
+				return (
 					<ul>
-						<Counter color="tomato" />
-						<Counter color="skyblue" />
-						<Counter color="limegreen" />
+						{counters}
 					</ul>
-				</div>,
+				);
+			}
+
+			// Reactの設計では値を持つコンポーネントは最小限にするのが推奨されている
+			// 値を保つ必要がないコンポーネントは関数で表現する
+			class App extends React.Component {
+				constructor() {
+					super();
+					this.state = {
+						counters: [
+							{ id: 'A', count: 0, color: 'tomato' },
+							{ id: 'B', count: 0, color: 'skyblue' },
+							{ id: 'C', count: 0, color: 'limegreen' },
+							{ id: 'D', count: 0, color: 'gray' },
+							{ id: 'E', count: 0, color: 'pink' },
+						],
+						total: 0
+					}
+					this.countUp = this.countUp.bind(this);
+				}
+				countUp(counter) {
+					this.setState(prevState => {
+						const counters = prevState.counters.map(counter => {
+							return { id: counter.id, count: counter.count, color: counter.color };
+						});
+						const pos = counters.map(counter => {
+							return counter.id;
+						}).indexOf(counter.id);
+						counters[pos].count++;
+						return {
+							counters: counters,
+							total: prevState.total + 1
+						};
+					});
+				}
+				render() {
+					return (
+						<div className="container">
+					// コンポーネント名の1文字目は必ず大文字にする
+							// 独自の属性を付与することができる
+							<CounterList
+								counters={this.state.counters}
+								countUp={this.countUp}
+							/>
+							<div>TOTAL INVENTORY: {this.state.total}</div>
+						</div>
+					);
+				}
+			}
+
+			ReactDOM.render(
+				<App />,
 				document.getElementById('root')
 			);
+
+			{/*
+				const name = 'tt';
+				const showMsg = () => alert('Hello');
+
+				// これはJSXという記法
+				ReactDOM.render(
+					// classはjsで予約語のため、classNameとしないとだめ
+					<div className="box">
+					// styleをインラインで指定するときはオブジェクト型で渡す必要がある
+						<div style={{ width: 100, height: 100, backgroundColor: 'tomato' }} onClick={showMsg}></div>
+						<p>Hello! {name.toUpperCase()}</p> //{}で囲めばjsを記述できる
+						<hr /> 閉じタグが無いタグの場合、開始タグにスラッシュを記述しないとだめ
+					</div>,
+					document.getElementById('root')
+				);
+				*/}
 		})();
 	</script>
 </body>

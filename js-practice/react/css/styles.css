@@ -1,5 +1,5 @@
 body {
-	font-size: 16px;
+	font-style: 16px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -25,4 +25,17 @@ body {
 	user-select: none;
 	border-radius: 5px;
 	margin: 0 5px 10px;
+}
+
+.box {
+	width: max-content;
+	height: 100px;
+	background: skyblue;
+}
+
+.container div {
+	text-align: right;
+	padding: 5px;
+	font-style: 12px;
+	font-weight: bold;
 }
