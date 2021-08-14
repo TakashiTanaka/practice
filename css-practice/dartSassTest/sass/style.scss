@@ -1,0 +1,9 @@
+// useでファイルを呼び出す。また、asで繋ぐことで名前空間を定義することができる
+// 下記の場合は_variables.scssファイルを読み込み、名前空間はvarに設定
+@use 'variables' as var;
+
+body {
+	// 変数を呼び出す際は名前空間名と変数名をピリオドで繋いで呼び出す
+	background: var.$backgroundColor;
+	color: var.$textColor;
+}
