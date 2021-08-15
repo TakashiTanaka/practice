@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			font-size: 1.5rem;
+			padding: 0;
+			margin: 0;
+		}
+
+		p {
+			padding: 0;
+			margin: 0;
+		}
+
+		section {
+			gap: 0.5em;
+			padding: 2em;
+		}
+
+		section:not([id="test5"]) {
+			display: flex;
+		}
+
+		section:nth-child(odd) {
+			background-color: rgb(210, 210, 210);
+		}
+
+		.red-text {
+			color: red;
+			font-weight: bold;
+		}
+
+		#test5 li {
+			cursor: pointer;
+		}
+
+		#test5 li:hover::after {
+			content: '[x]';
+			font-size: 14px;
+			color: #aaa;
+			margin-left: 4px;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<p id="test1">ボタンを押すと文字が変化します</p>
+		<button id="test1-btn">Change!</button>
+	</section>
+	<section>
+		<ul id="test2">
+			<li>Item0</li>
+			<li>Item1</li>
+			<li>Item2（eqメソッドで指定）</li>
+			<li>Item3</li>
+			<li>Item4</li>
+			<li>Item5</li>
+		</ul>
+	</section>
+	<section>
+		<ul id="test3">
+			<li>Item0（:nth-child(odd)で指定）</li>
+			<li>Item1</li>
+			<li>Item2（:nth-child(odd)で指定）</li>
+			<li>Item3</li>
+			<li>Item4（:nth-child(odd)で指定）</li>
+			<li>Item5（:last-childで指定）</li>
+		</ul>
+	</section>
+	<section id="test4">
+	</section>
+	<section id="test5">
+		<input type="text" id="test5-input">
+		<button id="test5-btn">Add</button>
+		<ul></ul>
+	</section>
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
