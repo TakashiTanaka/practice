@@ -38,6 +38,7 @@
 - [三択クイズ](https://takashitanaka.github.io/practice/js-practice/quiz/index.html)
 - [スロットマシン](https://takashitanaka.github.io/practice/js-practice/slot/index.html)
 - [webpack](https://takashitanaka.github.io/practice/js-practice/webpack/index.html)
+- [jQuery](https://takashitanaka.github.io/practice/js-practice/jquery/index.html)
 <br><br>
 
 ## Git
