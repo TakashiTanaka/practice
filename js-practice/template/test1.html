@@ -1,0 +1,53 @@
+<!-- templateタグを試してみる -->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>template</title>
+</head>
+
+<body>
+	<button id="test1-btn">
+		内容を変えずに挿入します
+	</button>
+	<button id="test2-btn">
+		内容を変えて挿入します
+	</button>
+	<template id="test1">
+		<h1>テンプレートテスト1</h1>
+		<p>このテキストはHTMLで生成されました</p>
+	</template>
+	<template id="test2">
+		<h1>テンプレートテスト2</h1>
+		<p id="test2-txt"></p>
+	</template>
+	<script>
+		// シンプルにコンテンツを挿入する
+		const activeTemplate = () => {
+			const template = document.getElementById("test1"); // template要素を取得
+			const content = template.content; // template要素の中身を取得
+			const clone = document.importNode(content, true); // 要素の中身を複製する
+			document.body.appendChild(clone); // body内に挿入する
+		}
+		// ボタンをクリックすると要素が挿入される
+		document.getElementById('test1-btn').addEventListener('click', activeTemplate, { once: true });
+
+
+		// 内容をJavaScriptで設定して挿入する
+		const activeTemplate2 = () => {
+			const template = document.getElementById("test2"); // template要素を取得
+			const content = template.content; // template要素の中身を取得
+			const clone = document.importNode(content, true); // 要素を複製する
+			clone.getElementById('test2-txt').innerText = 'このテキストはJavaScriptで生成されました'; //テキストの中身を設定
+			document.body.appendChild(clone); // body内に挿入する
+		}
+		// ボタンをクリックすると要素が挿入される
+		document.getElementById('test2-btn').addEventListener('click', activeTemplate2, { once: true });
+	</script>
+</body>
+
+</html>

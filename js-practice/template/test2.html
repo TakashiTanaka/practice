@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>template</title>
+</head>
+
+<body>
+	<h1>配列のサイズに応じて、繰り返し要素を作成する</h1>
+	<template id="test">
+		<section>
+			<h1 class="title"></h1>
+			<p class="para"></p>
+		</section>
+	</template>
+	<script>
+		// タイトルと段落の情報が入っているオブジェクトを含んだ配列
+		const data = [
+			{ title: 'title1', para: 'paragraph1' },
+			{ title: 'title2', para: 'paragraph2' },
+			{ title: 'title3', para: 'paragraph3' },
+			{ title: 'title4', para: 'paragraph4' },
+		];
+
+		// 関数合成の実験中...
+		const getParent = id => document.querySelector(id);
+		const getContents = el => el.content;
+		const cloneContents = contents => document.importNode(contents, true);
+		const setTxt = el => txt => el.innerText = txt;
+		const addEl = parent => el => parent.appendChild(el);
+
+		const activeTemplate = compose(getParent("#test"), getContents, cloneContents, setTxt(), addEl(body));
+
+		// オブジェクトを引数にとり、templateから要素を生成する関数
+		const activeTemplate = info => {
+			const template = document.getElementById("test"); // template要素を取得
+			const content = template.content; // template要素の中身を取得
+			const clone = document.importNode(content, true); // 要素を複製する
+			clone.querySelector('.title').innerText = info.title; //テキストの中身を設定
+			clone.querySelector('.para').innerText = info.para; //テキストの中身を設定
+			document.body.appendChild(clone); // body内に挿入する
+		}
+
+		// data配列の数だけ、activeTemplateを繰り返す
+		data.forEach(info => activeTemplate(info));
+	</script>
+
+</body>
+
+</html>
