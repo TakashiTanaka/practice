@@ -25,15 +25,6 @@
 			{ title: 'title4', para: 'paragraph4' },
 		];
 
-		// 関数合成の実験中...
-		const getParent = id => document.querySelector(id);
-		const getContents = el => el.content;
-		const cloneContents = contents => document.importNode(contents, true);
-		const setTxt = el => txt => el.innerText = txt;
-		const addEl = parent => el => parent.appendChild(el);
-
-		const activeTemplate = compose(getParent("#test"), getContents, cloneContents, setTxt(), addEl(body));
-
 		// オブジェクトを引数にとり、templateから要素を生成する関数
 		const activeTemplate = info => {
 			const template = document.getElementById("test"); // template要素を取得
