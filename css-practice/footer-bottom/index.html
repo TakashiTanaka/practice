@@ -6,19 +6,28 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>footerのボトム固定の検証</title>
+	<style>
+		li {
+			margin-bottom: 2em;
+		}
+	</style>
 </head>
 
 <body>
 	<ul>
 		<li>
-			<a href="./case1.html">Case 1 absoluteとbottomを使った方法</a>（参考：<a
-				href="https://techacademy.jp/magazine/19410">https://techacademy.jp/magazine/19410</a>）<br>
+			<a href="./case1.html">Case 1 absoluteとbottomを使った方法</a><br>
+			参考：<a href="https://techacademy.jp/magazine/19410">https://techacademy.jp/magazine/19410</a><br>
 			この方法はfooterに高さが指定されていないとだめ
 		</li>
 		<li>
-			<a href="./case2.html">Case 2 flexboxを使った方法</a>（参考：<a
-				href="https://www.nxworld.net/css-sticky-footer.html">https://www.nxworld.net/css-sticky-footer.html</a>）
+			<a href="./case2.html">Case 2 flexboxを使った方法</a><br>
+			参考：<a href="https://www.nxworld.net/css-sticky-footer.html">https://www.nxworld.net/css-sticky-footer.html</a><br>
 			この方法はfooterが高さ可変でもOK
+		</li>
+		<li>
+			<a href="./case3.html">Case 3 fixedを使った方法</a><br>
+			逆にどんな状況でも常に最下部に表示してしまう
 		</li>
 	</ul>
 </body>
