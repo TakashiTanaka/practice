@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ネガティブマージンのテスト</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		h1 {
+			margin-bottom: 0.5em;
+		}
+
+		.container {
+			background: #9f9f9f;
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			padding: 0 50px;
+		}
+
+		section {
+			min-height: 200px;
+			display: grid;
+			place-items: center;
+			align-content: center;
+			width: auto;
+		}
+
+		.basic {
+			background: #ff7f50;
+		}
+
+		.full {
+			background: #50cdff;
+			margin: 0 -50px;
+		}
+
+		.max-width {
+			background: #bde2bd;
+			max-width: 800px;
+		}
+
+		.max-width-center {
+			background: #df9ffd;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.measure {
+			background: #ff5555;
+			width: 800px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<section class="basic">
+			<h1>画面幅 - 左右のpadding = 要素幅</h1>
+			このBOXは親要素のpadding分、幅が狭まる
+		</section>
+		<section class="full">
+			<h1>画面幅 - 左右のpadding + ネガティブマージン = 要素幅</h1>
+			このBOXはネガティブマージンを適用しているので、幅が画面幅になる
+		</section>
+		<section class="max-width">
+			<h1>
+				画面幅800px以下 → 画面幅 - 左右のpadding = 要素幅<br>
+				画面幅800px以上 → 800px = 要素幅
+			</h1>
+			このBOXはmax-width: 800px;が適用されているので、<br>
+			画面幅が800px以下だと親要素のpadding分、幅が狭まるが、<br>
+			画面幅が800px以上になると幅が800pxに固定される
+		</section>
+		<div class="measure">800px</div>
+		<section class="max-width-center">
+			<h1>幅は上のBOXと同様</h1>
+			上記のmax-widthを設定した要素を左右中央揃えにしたい場合は、<br>
+			margin-auto: 0 auto;を利用する
+		</section>
+	</div>
+</body>
+
+</html>
