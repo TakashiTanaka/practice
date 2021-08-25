@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<!-- <meta name="viewport" content="width=device-width"> -->
+	<meta name="viewport" content="width=360">
+	<title>Viewportの検証</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background: #ddd;
+			font-size: 1rem;
+		}
+
+		.measure {
+			width: 320px;
+			height: 50px;
+			background: red;
+		}
+	</style>
+</head>
+
+<body id="body">
+	<h1>Viewportの検証</h1>
+	<div class="measure">このBOXは320px</div>
+	<script>
+		addEventListener('resize', () => {
+			console.log(document.documentElement.clientWidth);
+		});
+	</script>
+</body>
+
+</html>
