@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>animeJsTest</title>
+	<script src="anime.min.js"></script>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+
+		.wrapper {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.wrapper section:nth-child(even) {
+			background: #e2e2e2;
+		}
+
+		section {
+			padding: 60px;
+		}
+
+		.square {
+			background-color: #1fc3cd;
+			width: 60px;
+			height: 60px;
+			cursor: pointer;
+		}
+
+		.circle {
+			background-color: #ff9970;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<section>
+			<p>el1-X方向に移動する</p>
+			<div class="square" id="el1"></div>
+			<p>参考：<a href="https://uxbear.me/tech-animejs-2/">https://uxbear.me/tech-animejs-2/</a> </p>
+		</section>
+		<section>
+			<p>el2-形と色が変わる</p>
+			<div class="circle" id="el2"></div>
+		</section>
+		<section>
+			<p>el3-デュレーション</p>
+			<div class="square" id="el3"></div>
+		</section>
+		<section>
+			<p>el4-ディレイ</p>
+			<div class="circle" id="el4"></div>
+		</section>
+		<section>
+			<p>el5-色々組み合わせる</p>
+			<div class="square" id="el5"></div>
+		</section>
+	</div>
+	<script src="index.js"></script>
+</body>
+
+</html>
