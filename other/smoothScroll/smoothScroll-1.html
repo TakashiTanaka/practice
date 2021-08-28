@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>smoothScroll-1</title>
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+
+		div {
+			background: rgb(176, 176, 176);
+			/* border: 1px solid #000; */
+			height: 2000px;
+			padding: 20px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>CSSでhtml要素にscroll-behavior: smooth;を適用</h1>
+	<p>これはSafari対応していない20210828時点</p>
+	<a href="#A">Aまで移動します</a>
+	<a href="#B">Bまで移動します</a>
+	<a href="#C">Cまで移動します</a>
+	<div id="A">A</div>
+	<div id="B">B</div>
+	<div id="C">C</div>
+</body>
+
+</html>
