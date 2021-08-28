@@ -1,0 +1,11 @@
+doctype html 
+html(lang="ja")
+	include head.pug
+	body 
+		h1 Pugのテストです
+		p これでhtmlに出力されるはず
+		p.test testというクラスを付加したparagraph
+		p#test testというIDを付加したparagraph
+		p(class="test2") testというクラスを付加したparagraph
+		p(id="test2") testというIDを付加したparagraph
+		img(src="./hoge.jpg")
