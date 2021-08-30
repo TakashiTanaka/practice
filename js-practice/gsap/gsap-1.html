@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gaspのテスト</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+
+		section {
+			padding: 60px;
+		}
+
+		section:nth-child(even) {
+			background: #ddd;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		.box-container {
+			display: flex;
+			gap: 20px;
+		}
+
+		.box {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>gsapのテスト</h1>
+	<section>
+		<p id="test1">右に200px移動しながら色が変わるテキストです</p>
+	</section>
+	<section>
+		<p id="test2">段々と大きくなるテキストです</p>
+	</section>
+	<section>
+		<p id="test3">fromでアニメーションが設定されているテキストです</p>
+	</section>
+	<section>
+		<p id="test4">fromToでアニメーションが設定されているテキストです</p>
+	</section>
+	<section>
+		<p id="test5">イージングが設定されているテキストです</p>
+	</section>
+	<section>
+		<div class="box-container">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+	</section>
+	<section>
+		<p id="test6">スタイルがセットされているテキストです</p>
+	</section>
+	<section>
+		<p id="test7">完了後にコールバックが設定されているテキストです</p>
+	</section>
+	<section>
+		<p id="test8">タイムライン1</p>
+		<p id="test9">タイムライン2（タイムライン1が完了したら始動する）</p>
+	</section>
+	<section>
+		<p id="test10">メソッドチェーン1</p>
+		<p id="test11">メソッドチェーン2</p>
+		<p id="test12">メソッドチェーン3</p>
+	</section>
+	<section>
+		<p id="test13">デフォルト値</p>
+		<p id="test14">デフォルト値</p>
+		<p id="test15">デフォルト値</p>
+	</section>
+	<section>
+		<div class="box" id="box1"></div>
+		<div class="box" id="box2"></div>
+		<div class="box" id="box3"></div>
+		<div class="box" id="box4"></div>
+	</section>
+	<script src="dist/main.js"></script>
+</body>
+
+</html>
