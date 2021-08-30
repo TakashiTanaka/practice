@@ -13,7 +13,7 @@ module.exports = {
 	},
 	output: {
 		path: `${__dirname}/dist`,
-		publicPath: `${__dirname}`,
+		publicPath: `/${__dirname}/`,
 		filename: '[name].js',
 	},
 	optimization: {
