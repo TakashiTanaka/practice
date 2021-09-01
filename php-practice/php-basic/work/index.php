@@ -257,6 +257,57 @@
   //   echo $key . ': ' . $score;
   // }
 
+  // ====================================================
+
+  // 配列を別の配列内で展開する
+
+  // $moreScores = [
+  //   55,
+  //   72,
+  // ];
+
+  // $scores = [
+  //   90,
+  //   40,
+  //   ...$moreScores,
+  //   100,
+  // ];
+
+  // print_r($scores);
+
+  // ====================================================
+
+  // 可変長引数
+  // function sum(...$numbers)
+  // {
+  //   $total = 0;
+  //   foreach ($numbers as $number) {
+  //     $total += $number;
+  //   }
+
+  //   return $total;
+  // }
+
+  // ====================================================
+
+  // 配列の返り値
+  // function getStats(...$numbers)
+  // {
+  //   $total = 0;
+  //   foreach ($numbers as $number) {
+  //     $total += $number;
+  //   }
+
+  //   return [$total, $total / count($numbers)];
+  // }
+
+  // print_r(getStats(10, 5, 4));
+
+  // jsにおける分割代入的なもの
+  // list($num, $average) = getStats(10, 5, 4);
+  // [$sum, $average] = getStats(10, 5, 4);
+
+
   ?>
 </body>
 
