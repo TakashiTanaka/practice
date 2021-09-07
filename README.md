@@ -20,6 +20,7 @@
 - [footer固定のテスト](https://takashitanaka.github.io/practice/css-practice/footer-bottom/index.html)
 - [viewportのテスト](https://takashitanaka.github.io/practice/html-practice/viewport/index.html)
 - [縦組みのテスト](https://takashitanaka.github.io/practice/css-practice/vertical-typo/index.html)
+- [背景画像のテスト](https://takashitanaka.github.io/practice/css-practice/cover-image/index.html)
 <br><br>
 
 ## Javascript
