@@ -1,0 +1,15 @@
+body {
+	padding: 0;
+	margin: 4em;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+
+	font-family: serif;
+	line-height: 1.75;
+}
+
+p,
+h1,
+h2 {
+	margin: 0;
+}
