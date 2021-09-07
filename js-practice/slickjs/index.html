@@ -35,6 +35,20 @@
 		section:nth-child(even) {
 			background: #888;
 		}
+
+		.slide-animation {
+			animation: fadezoom 8s 0s forwards;
+		}
+
+		@keyframes fadezoom {
+			0% {
+				transform: scale(1);
+			}
+
+			100% {
+				transform: scale(1.2);
+			}
+		}
 	</style>
 </head>
 
@@ -57,6 +71,18 @@
 			<img src="./img/vecteezy_a-person-holding-a-hamster_1862763.jpg" alt="" srcset="">
 			<img src="./img/vecteezy_a-person-holding-a-hamster_1862883.jpg" alt="" srcset="">
 		</div>
+	</section>
+	<section>
+		<h2>ズームインしながらフェードするスライダー</h2>
+		<div class="block zoom-fade">
+			<img src="./img/vecteezy_a-close-up-of-a-hamster_1862593.jpg" alt="" srcset="">
+			<img src="./img/vecteezy_a-person-holding-a-hamster_1862763.jpg" alt="" srcset="">
+			<img src="./img/vecteezy_a-person-holding-a-hamster_1862883.jpg" alt="" srcset="">
+		</div>
+		<p>現在のスライドは<span id="currentNum"></span>番目</p>
+		<p>次のスライドは<span id="nextNum"></span>番目</p>
+		<p>変わる前<span id="beforeChange"></span></p>
+		<p>変わった後<span id="afterChange"></span></p>
 	</section>
 	<script src="main.js"></script>
 </body>
