@@ -19,6 +19,7 @@
 - [要素幅のテスト](https://takashitanaka.github.io/practice/css-practice/container-test/index.html)
 - [footer固定のテスト](https://takashitanaka.github.io/practice/css-practice/footer-bottom/index.html)
 - [viewportのテスト](https://takashitanaka.github.io/practice/html-practice/viewport/index.html)
+- [縦組みのテスト](https://takashitanaka.github.io/practice/css-practice/vertical-typo/index.html)
 <br><br>
 
 ## Javascript
@@ -42,6 +43,10 @@
 - [スロットマシン](https://takashitanaka.github.io/practice/js-practice/slot/index.html)
 - [webpack](https://takashitanaka.github.io/practice/js-practice/webpack/index.html)
 - [jQuery](https://takashitanaka.github.io/practice/js-practice/jquery/index.html)
+- [Slick.js](https://takashitanaka.github.io/practice/js-practice/slickjs/index.html)
+- [gsap](https://takashitanaka.github.io/practice/js-practice/gsap/index.html)
+- [animejs](https://takashitanaka.github.io/practice/js-practice/animeJs/index.html)
+- [スムーススクロール](https://takashitanaka.github.io/practice/other/smoothScroll/index.html)
 <br><br>
 
 ## Git
