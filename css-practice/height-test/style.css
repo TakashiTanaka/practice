@@ -1,0 +1,11 @@
+.test {
+	background-color: red;
+	width: 500px;
+	height: 200px;
+}
+
+.test__inner {
+	background-color: cornflowerblue;
+	width: 50%;
+	height: 50%;
+}
