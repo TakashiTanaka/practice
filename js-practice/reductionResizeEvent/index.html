@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>リサイズイベントの負荷軽減</title>
+</head>
+
+<body>
+	<h1>リサイズイベントの負荷軽減</h1>
+	<p>リサイズ後、一秒間リサイズ動作がなかった場合、関数が実行されます。</p>
+	<p id="output"></p>
+	<script>
+		// リサイズイベントの負荷軽減関数
+		const reductionResizeEvent = (f, arg) => {
+			let resizeTimer;
+			window.addEventListener("resize", () => {
+				if (resizeTimer != null) clearTimeout(resizeTimer);
+				resizeTimer = setTimeout(() => f(arg), 1000);
+			});
+		}
+
+		// テスト用関数
+		const test = (msg) => {
+			output.innerText = msg;
+			setTimeout(() => { output.innerText = ''; }, 1000)
+		}
+
+		// 関数を実行
+		reductionResizeEvent(test, '関数が実行されました');
+
+	</script>
+</body>
+
+</html>
