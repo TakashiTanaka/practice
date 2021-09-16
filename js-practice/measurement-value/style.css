@@ -1,0 +1,27 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+main {
+	background-color: burlywood;
+	height: 1600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	background: #333;
+	color: #fff;
+	padding: 3em 0;
+	margin-top: auto;
+}
+
+.data {
+	position: fixed;
+	top: 16px;
+	left: 16px;
+}
