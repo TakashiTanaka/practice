@@ -1,0 +1,11 @@
+doctype html
+block vars
+html(lang="ja")
+  head
+    include ./component/c_head.pug
+
+  body(class=key)
+    .l_contents
+      include ./component/c_header.pug
+      block contents
+    include ./component/c_footer.pug

@@ -1,0 +1,18 @@
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width, initial-scale=1.0")
+meta(name="format-detection", content="telephone=no")
+
+title #{page.title}
+
+meta(content=page.description, name="description")
+meta(content=page.keywords, name="keywords")
+meta(content=page.title, property="og:title")
+meta(content=page.description, property="og:description")
+meta(content=domain + page.image, property="og:image")
+meta(content=domain + page.url, property="og:url")
+meta(content=(key == "top" ? "website" : "article"), property="og:type")
+meta(content="ja_JP", property="og:locale")
+
+link(rel="stylesheet", href=css_path+"/style.css")
+script(src="https://code.jquery.com/jquery-1.11.2.min.js")
