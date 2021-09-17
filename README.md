@@ -50,6 +50,7 @@
 - [スムーススクロール](https://takashitanaka.github.io/practice/other/smoothScroll/index.html)
 - [フッターの上でアイテムを停止させる](https://takashitanaka.github.io/practice/js-practice/fixedItemAboveFooter/index.html)
 - [jsで値を取得する](https://takashitanaka.github.io/practice/js-practice/measurement-value/index.html)
+- [スクリプトを動的に読み込む](https://takashitanaka.github.io/practice/js-practice/scriptChange/index.html)
 <br><br>
 
 ## Git
