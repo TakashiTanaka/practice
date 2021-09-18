@@ -154,8 +154,8 @@ nを押すと次の検索結果を表示<br><br>
 ### chmod
 ファイルのアクセス権を変更できる
 chmod a=rwxrwxrwx ファイル名 → 一括指定
-chmod g=rw,o=rw ファイル名 → イコールで指定
-chmod g+x,o-w ファイル名 → 権限を足す、引くで指定<br>
+chmod u=rwx,g=rw,o=rw ファイル名 → イコールで指定
+chmod u+x,g+x,o-w ファイル名 → 権限を足す、引くで指定<br>
 rは2の2乗、wは2の1乗、 xは2の0乗で計算して指定することもできる
 rwxは7、rw-は6、r--は4など<br><br>
 
