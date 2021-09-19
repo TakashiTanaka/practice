@@ -1,0 +1,7 @@
+extends _layout.pug
+
+block append content
+	h1= title 
+	- var pets = ['cat', 'dog']
+	each petName in pets 
+		include _pet.pug
