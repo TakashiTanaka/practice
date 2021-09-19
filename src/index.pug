@@ -1,0 +1,103 @@
+- var BASE_URL = "https://takashitanaka.github.io/practice/";
+- var HTML_DIR = `${BASE_URL}html/`;
+- var CSS_DIR = `${BASE_URL}css/`;
+- var CSS_DOTINSTALL_DIR = `${CSS_DIR}dotinstall/`;
+- var JS_DIR = `${BASE_URL}js/`;
+- var JS_DOTINSTALL_DIR = `${JS_DIR}dotinstall/`;
+- var JS_LIB_DIR = `${JS_DIR}library/`;
+- var JS_TEMPLATE_ENGINE_DIR = `${JS_DIR}template-engine/`;
+- var JS_FRAME_WORK_DIR = `${JS_DIR}frame-work/`;
+- var JS_TASK_RUNNER_DIR = `${JS_DIR}task-runner/`;
+- var PHP_DIR = `${BASE_URL}php/`;
+- var OTHER_DIR = `${BASE_URL}other/`;
+
+
+doctype html
+html(lang="ja")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title practiceについて
+	body 
+		h1 学習記録
+		p 主にチュートリアルや参考書から学んだ事をアウトプットするリポジトリです。<br>下記、言語別に実装したgithubページを公開しています。
+		h2 HTML & CSS
+		h3 Dotinstallで学んだもの
+		ul 
+			li: a(href=`${CSS_DOTINSTALL_DIR}css-basic/css-basic.html`) CSS基礎文法編
+			li: a(href=`${CSS_DOTINSTALL_DIR}css-selector/css-selector.html`) CSSセレクタ編
+			li: a(href=`${CSS_DOTINSTALL_DIR}css-flexbox/css-flexbox-main.html`) CSSフレックスボックス編
+			li: a(href=`${CSS_DOTINSTALL_DIR}css-animation/css-animation-main.html`) CSSアニメーション編
+			li: a(href=`${CSS_DOTINSTALL_DIR}css-responsive/index.html`) CSSレスポンシブウェブデザイン編
+			li: a(href=`${CSS_DOTINSTALL_DIR}css-gridLayout/index.html`) CSSグリッドレイアウト編
+			li: a(href=`${CSS_DOTINSTALL_DIR}css-variables/index.html`) CSS変数編
+			li: a(href=`${CSS_DOTINSTALL_DIR}css-website/index.html`) アプリ紹介ページ
+			li: a(href=`${CSS_DOTINSTALL_DIR}chat-ui/chat-ui.html`) チャット風UI
+			li: a(href=`${CSS_DOTINSTALL_DIR}heart-icon/heart-icon.html`) ハートアイコン
+			li: a(href=`${CSS_DOTINSTALL_DIR}bootstrap5/index.html`) Bootstrap5入門
+		h3 その他
+		ul 
+			li: a(href=`${CSS_DIR}container-test/index.html`) 要素幅のテスト
+			li: a(href=`${CSS_DIR}footer-bottom/index.html`) footer固定のテスト
+			li: a(href=`${HTML_DIR}viewport/index.html`) viewportのテスト
+			li: a(href=`${CSS_DIR}vertical-typo/index.html`) 縦組みのテスト
+			li: a(href=`${CSS_DIR}cover-image/index.html`) 背景画像のテスト
+		h2 Javascript
+		h3 Dotinstallで学んだもの
+		ul
+			li: a(href=`${JS_DOTINSTALL_DIR}omikuji/omikuji.html`) おみくじプログラム
+			li: a(href=`${JS_DOTINSTALL_DIR}bingo/bingo.html`) ビンゴシート作成プログラム
+			li: a(href=`${JS_DOTINSTALL_DIR}modalWindow/modalWindow.html`) モーダルウィンドウ
+			li: a(href=`${JS_DOTINSTALL_DIR}tab/tab.html`) タブメニュー
+			li: a(href=`${JS_DOTINSTALL_DIR}canvas/canvas.html`) Canvas
+			li: a(href=`${JS_DOTINSTALL_DIR}loadingIcon/loadingIcon.html`) ローディングアイコン
+			li: a(href=`${JS_DOTINSTALL_DIR}humbergerMenu/index.html`) ハンバーガーメニュー
+			li: a(href=`${JS_DOTINSTALL_DIR}accordion/index.html`) アコーディオンUI
+			li: a(href=`${JS_DOTINSTALL_DIR}intersectionObserverAPI/index.html`) Intersection Observer API
+			li: a(href=`${JS_DOTINSTALL_DIR}slideShow/index.html`) スライドショー
+			li: a(href=`${JS_DOTINSTALL_DIR}analogClock/index.html`) アナログ時計
+			li: a(href=`${JS_DOTINSTALL_DIR}calendar/index.html`) カレンダー
+			li: a(href=`${JS_DOTINSTALL_DIR}stopWatch/index.html`) ストップウォッチ
+			li: a(href=`${JS_DOTINSTALL_DIR}typing/index.html`) タイピングゲーム
+			li: a(href=`${JS_DOTINSTALL_DIR}quiz/index.html`) 三択クイズ
+			li: a(href=`${JS_DOTINSTALL_DIR}slot/index.html`) スロットマシン
+		h3 jsライブラリ
+		ul
+			li: a(href=`${JS_LIB_DIR}datGUI/index.html`) dat.GUI
+			li: a(href=`${JS_LIB_DIR}threejs/index.html`) three.js
+			li: a(href=`${JS_LIB_DIR}jquery/index.html`) jQuery
+			li: a(href=`${JS_LIB_DIR}slickjs/index.html`) Slick.js
+			li: a(href=`${JS_LIB_DIR}gsap/index.html`) gsap
+			li: a(href=`${JS_LIB_DIR}animeJs/index.html`) animejs
+		h3 タスクランナー
+		ul
+			li: a(href=`${JS_TASK_RUNNER_DIR}gulp/index.html`) gulp入門
+		h3 その他
+		ul
+			li: a(href=`${JS_DIR}webpack/index.html`) webpack
+			li: a(href=`${JS_DIR}smoothScroll/index.html`) スムーススクロール
+			li: a(href=`${JS_DIR}fixedItemAboveFooter/index.html`) フッターの上でアイテムを停止させる
+			li: a(href=`${JS_DIR}measurement-value/index.html`) jsで値を取得する
+			li: a(href=`${JS_DIR}scriptChange/index.html`) スクリプトを動的に読み込む
+			li: a(href=`${JS_DIR}reductionResizeEvent/`) リサイズイベントの負荷軽減
+			li: a(href=`${JS_DIR}template/index.html`) templateタグを使った動的な要素の生成テスト
+		h3 テンプレートエンジン
+		ul 
+			li: a(href=`${JS_TEMPLATE_ENGINE_DIR}pug/index.html`) Pug入門
+		h3 フレームワーク
+		ul 
+			li: a(href=`${JS_FRAME_WORK_DIR}gatsbyTest/index.html`) gatsby入門
+			li: a(href=`${JS_FRAME_WORK_DIR}react/index.html`) react入門
+			li: a(href=`${JS_FRAME_WORK_DIR}react-handson/index.html`) React Handson
+		h2 PHP
+		ul
+			li: a(href=`${PHP_DIR}/php-intro/`) PHP入門
+			li: a(href=`${PHP_DIR}/php-basic/`) PHP基礎
+		h2 Other
+		ul
+			li: a(href=`${OTHER_DIR}/git/`) git
+			li: a(href=`${OTHER_DIR}/firebase/`) Firebaseでwebサイトを公開
+			li: a(href=`${OTHER_DIR}/UNIX/`) UNIXコマンド入門
+			li: a(href=`${OTHER_DIR}/emmet/`) Emmet記法
+			li: a(href=`${OTHER_DIR}/svg/`) SVGの練習
