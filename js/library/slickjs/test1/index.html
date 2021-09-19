@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Slick.jsの練習</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="../slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="../slick.css" />
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+	<section>
+		<h1>Slick.jsの練習</h1>
+	</section>
+	<section>
+		<h2>基本のスライダー</h2>
+		<div class="block basic">
+			<img src="../img/vecteezy_a-close-up-of-a-hamster_1862593.jpg" alt="" srcset="">
+			<img src="../img/vecteezy_a-person-holding-a-hamster_1862763.jpg" alt="" srcset="">
+			<img src="../img/vecteezy_a-person-holding-a-hamster_1862883.jpg" alt="" srcset="">
+		</div>
+	</section>
+	<section>
+		<h2>center modeのスライダー</h2>
+		<div class="block center">
+			<img src="../img/vecteezy_a-close-up-of-a-hamster_1862593.jpg" alt="" srcset="">
+			<img src="../img/vecteezy_a-person-holding-a-hamster_1862763.jpg" alt="" srcset="">
+			<img src="../img/vecteezy_a-person-holding-a-hamster_1862883.jpg" alt="" srcset="">
+		</div>
+	</section>
+	<section>
+		<h2>ズームインしながらフェードするスライダー</h2>
+		<div class="block zoom-fade">
+			<img src="../img/vecteezy_a-close-up-of-a-hamster_1862593.jpg" alt="" srcset="">
+			<img src="../img/vecteezy_a-person-holding-a-hamster_1862763.jpg" alt="" srcset="">
+			<img src="../img/vecteezy_a-person-holding-a-hamster_1862883.jpg" alt="" srcset="">
+		</div>
+		<p>現在のスライドは<span id="currentNum"></span>番目</p>
+		<p>次のスライドは<span id="nextNum"></span>番目</p>
+		<p>変わる前<span id="beforeChange"></span></p>
+		<p>変わった後<span id="afterChange"></span></p>
+	</section>
+	<script src="main.js"></script>
+</body>
+
+</html>
