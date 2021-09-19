@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>v-for</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- このように書いてもよいが、 -->
+    <!-- <my-product v-for="item in products" :id="item.id" :name="item.name" :price="item.price"></my-product> -->
+    <!-- v-bind="item"でまとめることができる -->
+    <my-product v-for="item in products" v-bind="item"></my-product>
+  </div>
+  <script src="myProducts.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

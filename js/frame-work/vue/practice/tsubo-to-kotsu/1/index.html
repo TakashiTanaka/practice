@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="app">
+		<!-- マスタッシュ -->
+		{{message}}
+
+		<!-- v-bindで属性にbindする -->
+		<input type="text" v-bind:value="message">
+
+		<!-- style属性にbindする -->
+		<!-- cssのプロパティ名はキャメルケースで記述する -->
+		<p v-bind:style="{fontSize: pSize}">フォントサイズは{{pSize}}です</p>
+
+		<!-- class属性にbindする。プロパティ名はclass名、値はclass名を出力するための条件を表す -->
+		<p v-bind:class="{capitalize: isCapital}">hello!</p>
+
+		<!-- リストデータをbindする -->
+		<!-- リストデータの場合、keyを付与する -->
+		<table border="1">
+			<tr v-for="item in items" v-bind:key="item.code">
+				<td>{{item.code}}</td><td>{{item.name}}</td>
+			</tr>
+		</table>
+
+		<!-- v-ifで条件付きで描画する -->
+		<!-- この例だと、priceが1000未満だったら、セール実施中と表示される -->
+		{{price}}円 <span v-if="price < 1000">セール実施中！</span>
+
+		<!-- 複数の条件式を指定する -->
+		<!-- stockの値が1未満になったら在庫切れですと表示される -->
+		<p v-if="stock >= 1">残り{{stock}}個です</p>
+		<p v-else>在庫切れです</p>
+
+		<!-- より広い範囲を切り替えたい場合はtemplateタグを使うと良い -->
+		<template v-if=""></template>
+
+		<!-- v-showは条件式が成立する時だけ要素を表示する -->
+		<!-- v-ifとの違い→ifはdomに出力されない／showはdomに出力され、display:noneになる -->
+		<!-- templateでv-showは使えない -->
+		<!-- v-ifはノードを追加・削除するので負荷が高い、なのでデータの状態が変わらないものだったらv-showの方が高速で負荷が少ない -->
+		{{price}}円 <p v-show="price < 1000">セール実施中！</p>
+
+		<!-- filterはvue3で廃止になってしまったのだが、一応学ぶ -->
+		<!-- 金額を3桁ずつカンマで区切った書式で出力するフィルター -->
+		<p> {{price | number_format}}</p>
+
+		<!-- フィルターは連鎖することができる -->
+		<p> {{price | number_format | unit}}</p>
+
+		<!-- computed -->
+		調べたい年：<input type="text" v-model="year"><br>
+		{{year}}年は{{isUrudoshi ? 'うるう年です' : 'うるう年ではありません'}}
+
+		<!-- computedはキャッシュされる -->
+		<div v-show="show">
+			<p>now1: {{ now1() }}</p>
+			<p>now2: {{ now2 }}</p>
+		</div>
+
+		<!-- イベントハンドラ -->
+		<!-- クリックするとstockの数が減る -->
+		<template v-if="stock >= 1">
+			<span class="num">残り{{stock}}個</span>
+			<button class="btn" v-on:click="onDeleteItem">削除！</button><br>
+		</template>
+		<template v-else>在庫切れ</template>
+
+		<!-- コンポーネントの外側のイベントはaddEventListenerを使う -->
+		ウィンドウの横幅：{{width}}<br>
+		ウィンドウの高さ：{{height}}<br>
+
+		<!-- マウスの座標を取得する -->
+		マウスカーソルの位置：{{point.x}}, {{point.y}}<br>
+
+		<!-- データの変更を監視するウォッチャ -->
+		<!-- データの変更を検知して、イベントを起こす -->
+		<!-- イベントハンドリングと似ているが、ハンドラが呼び出されるタイミングがデータの変更である点が違う -->
+		<template v-if="stock >= 1">
+			<span class="num">残り{{stock}}個</span>
+			<button class="btn" v-on:click="onDeleteItem">削除！</button><br>
+		</template>
+		{{message2}}
+
+		<!-- フォーム入力バインディング -->
+		<!-- v-modelを指定したフォームはvalue, checked, selected属性が無視される→dataで初期値を設定しなきゃだめ -->
+		<input type="text" v-model="year">
+		<p>{{year}}</p>
+
+		<!-- 全角入力の時はエンターを押さないとdomに反映されない。一文字ずつdomに反映したい場合はv-bindを使う -->
+		<input type="text" v-on:input="yearInputHandler" v-bind:value="year2">
+		<p>{{year2}}</p>
+
+		<!-- 表示の切り替えでアニメーションさせたい時はtransitionで囲む -->
+		<!-- また、name属性をつけることでclass名の先頭部分を指定することができる -->
+		<button v-on:click="show2 = !show2">表示を切り替える</button>
+		<transition name="fade">
+			<p v-if="show2">
+				吾輩はフェードする猫だよ〜
+			</p>
+		</transition>
+		<transition name="slideInLeft">
+			<p v-if="show2">
+				吾輩はスライドインする猫だよ〜
+			</p>
+		</transition>
+		<!-- 外部ライブラリを使用する時、ライブラリ側で決まっているclass名を使わないと行けない場合がある -->
+		<!-- その場合、カスタムトランジションクラスを定義する -->
+		<!-- ここではanimate.cssを使っている -->
+		<transition name="zoom" enter-active-class="animate__animated animate__bounceIn"
+			leave-active-class="animate__animated animate__bounceOutDown">
+			<p v-if="show2">
+				吾輩はスライドインする猫だよ〜
+			</p>
+		</transition>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>

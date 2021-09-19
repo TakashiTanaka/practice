@@ -1,0 +1,36 @@
+.capitalize {
+	text-transform: capitalize;
+}
+
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+}
+
+/* デフォルトで表示している要素にはopacity:1を指定しなくても良いのでこれは省略してもok */
+.fade-enter-to,
+.fade-leave {
+	opacity: 1;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.5s;
+}
+
+/*  */
+
+.slideInLeft-enter-active,
+.slideInLeft-leave-active {
+	transition: transform 0.5s;
+}
+
+.slideInLeft-enter,
+.slideInLeft-leave-to {
+	transform: translateX(-100%);
+}
+
+.slideInLeft-enter-to,
+.slideInLeft-leave {
+	transform: translateX(0);
+}
