@@ -1,0 +1,16 @@
+{
+  "name": "6-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vue ui",
+    "version": "vue --version"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vue/cli": "^4.5.13"
+  }
+}
