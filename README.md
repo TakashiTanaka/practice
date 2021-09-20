@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
@@ -59,6 +58,7 @@
       <li><a href="https://takashitanaka.github.io/practice/js/library/slickjs/index.html">Slick.js</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/gsap/index.html">gsap</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/animeJs/index.html">animejs</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/js/library/swiper/index.html">swiper</a></li>
     </ul>
     <h3>タスクランナー</h3>
     <ul>
