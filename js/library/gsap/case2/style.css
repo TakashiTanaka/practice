@@ -1,0 +1,29 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	text-align: center;
+}
+
+section {
+	display: flex;
+}
+
+.box {
+	width: 100%;
+	padding-bottom: 200%;
+}
+
+.box--1 {
+	background-color: darkslategray;
+}
+
+.box--2 {
+	background-color: lightsteelblue;
+}
+
+.box--3 {
+	background-color: darkolivegreen;
+}

@@ -1,8 +1,9 @@
+
 <html lang="ja">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body> 
     <h1>学習記録</h1>
@@ -56,7 +57,7 @@
       <li><a href="https://takashitanaka.github.io/practice/js/library/threejs/index.html">three.js</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/jquery/index.html">jQuery</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/slickjs/index.html">Slick.js</a></li>
-      <li><a href="https://takashitanaka.github.io/practice/js/library/gsap/index.html">gsap</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/js/library/gsap/">gsap</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/animeJs/index.html">animejs</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/swiper/index.html">swiper</a></li>
     </ul>

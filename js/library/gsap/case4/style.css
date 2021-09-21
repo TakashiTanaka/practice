@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+section {
+	display: flex;
+	font-size: 16px;
+	gap: 2em;
+	padding: 50px;
+}
+
+.box {
+	min-width: calc(100% / 2);
+	padding-bottom: calc(100% / 2);
+}
+
+.box--1 {
+	background-color: darkslategray;
+}
+
+.box--2 {
+	background-color: lightsteelblue;
+}
+
+.box--3 {
+	background-color: darkolivegreen;
+}

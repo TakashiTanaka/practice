@@ -1,0 +1,30 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	text-align: center;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box {
+	width: calc(100% / 7);
+	padding-bottom: calc(100% / 7);
+}
+
+.box--1 {
+	background-color: darkslategray;
+}
+
+.box--2 {
+	background-color: lightsteelblue;
+}
+
+.box--3 {
+	background-color: darkolivegreen;
+}
