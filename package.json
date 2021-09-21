@@ -4,8 +4,7 @@
   "description": "主にチュートリアルや参考書から学んだ事をアウトプットするリポジトリです。   下記、言語別に実装したgithubページを公開しています。 <br><br>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pug": "pug ./src/index.pug -o . --pretty -E md"
+    "pug": "gulp pug"
   },
   "repository": {
     "type": "git",
@@ -19,6 +18,9 @@
   },
   "homepage": "https://github.com/TakashiTanaka/practice#readme",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
     "pug": "^3.0.2"
   }
 }

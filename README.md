@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body> 
+    <p>テスト！！！！</p>
     <h1>学習記録</h1>
     <p>主にチュートリアルや参考書から学んだ事をアウトプットするリポジトリです。<br>下記、言語別に実装したgithubページを公開しています。</p>
     <h2>HTML & CSS</h2>
@@ -16,7 +17,7 @@
       <li><a href="https://takashitanaka.github.io/practice/css/dotinstall/css-flexbox/css-flexbox-main.html">CSSフレックスボックス編</a></li>
       <li><a href="https://takashitanaka.github.io/practice/css/dotinstall/css-animation/css-animation-main.html">CSSアニメーション編</a></li>
       <li><a href="https://takashitanaka.github.io/practice/css/dotinstall/css-responsive/index.html">CSSレスポンシブウェブデザイン編</a></li>
-      <li><a href="https://takashitanaka.github.io/practice/css/dotinstall/css-gridLayout/index.html">CSSグリッドレイアウト編</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/css/dotinstall/css-gridLayout/">CSSグリッドレイアウト編</a></li>
       <li><a href="https://takashitanaka.github.io/practice/css/dotinstall/css-variables/index.html">CSS変数編</a></li>
       <li><a href="https://takashitanaka.github.io/practice/css/dotinstall/css-website/index.html">アプリ紹介ページ</a></li>
       <li><a href="https://takashitanaka.github.io/practice/css/dotinstall/chat-ui/chat-ui.html">チャット風UI</a></li>
