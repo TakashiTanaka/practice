@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Case 8 - auto-fitを使う</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<p>auto-fitを使うと使用可能なスペース内で自動的に列や行を調整してくれる</p>
+	<p>auto-fillとは違い、使用可能なスペースが余ると、新しいグリッドは生成されない</p>
+	<h1>auto-fitを使う</h1>
+	<pre>
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-auto-rows: minmax(100px, auto);
+	</pre>
+	<div class="container">
+		<div class="item">項目1</div>
+		<div class="item">項目2</div>
+		<div class="item">項目3</div>
+		<div class="item">項目4</div>
+		<div class="item">項目5</div>
+		<div class="item">項目6</div>
+	</div>
+	<pre>
+		grid-template-columns: repeat(auto-fit, minmax(500px, 800px));
+		grid-auto-rows: minmax(100px, auto);
+	</pre>
+	<div class="container--2">
+		<div class="item">項目1</div>
+		<div class="item">項目2</div>
+		<div class="item">項目3</div>
+		<div class="item">項目4</div>
+		<div class="item">項目5</div>
+		<div class="item">項目6</div>
+	</div>
+</body>
+
+</html>

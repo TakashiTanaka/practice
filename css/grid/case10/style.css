@@ -1,0 +1,20 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	background-color: lightsteelblue;
+	display: grid;
+	/* grid-auto-flowをcolumnにすると縦に並ぶ */
+	grid-auto-flow: column;
+	grid-template-rows: repeat(auto-fit, minmax(100px, min-content));
+	grid-auto-columns: auto;
+	/* ここで高さを設定しないとauto-fitしてくれない */
+	height: 100vh;
+}
+
+.item {
+	border: 1px solid #000;
+	text-align: center;
+}

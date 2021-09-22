@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Case 6 - minmax()関数を使う</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<p>minmax()関数は最小値と最大値を指定できる関数</p>
+	<p>下の例でいうと、行の高さは、最小値は100pxなんだけど、最大値はautoなのでコンテンツの高さに合わせて可変になる</p>
+	<h1>minmax()関数を使う</h1>
+	<p>grid-auto-rows: minmax(100px, auto);</p>
+	<div class="container">
+		<div class="item">項目1</div>
+		<div class="item">項目2</div>
+		<div class="item">項目3</div>
+		<div class="item">項目4</div>
+		<div class="item">項目5</div>
+		<div class="item">
+			項目6<br>長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト
+		</div>
+	</div>
+	<p>grid-auto-rows: 100px;でminmaxを使わなかった例</p>
+	<p>項目6が溢れてしまっている</p>
+	<div class="container--2">
+		<div class="item">項目1</div>
+		<div class="item">項目2</div>
+		<div class="item">項目3</div>
+		<div class="item">項目4</div>
+		<div class="item">項目5</div>
+		<div class="item">
+			項目6<br>長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト長いテキスト
+		</div>
+	</div>
+</body>
+
+</html>

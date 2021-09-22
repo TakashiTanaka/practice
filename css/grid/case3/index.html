@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Case 3 - gapを使った指定</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<p>gapを指定すると要素間の隙間を設定できる</p>
+	<p>gapに指定できる値はnormal, length, %。負の値はだめ</p>
+	<p>gapは列・行、column-gapは列、row-gapは行、それぞれ隙間を指定できる</p>
+	<h1>gapの指定</h1>
+	<p>gap:20px;</p>
+	<div class="container">
+		<div class="item">項目1</div>
+		<div class="item">項目2</div>
+		<div class="item">項目3</div>
+		<div class="item">項目4</div>
+		<div class="item">項目5</div>
+		<div class="item">項目6</div>
+	</div>
+	<p>grid-column-gap:20px;</p>
+	<div class="container--2">
+		<div class="item">項目1</div>
+		<div class="item">項目2</div>
+		<div class="item">項目3</div>
+		<div class="item">項目4</div>
+		<div class="item">項目5</div>
+		<div class="item">項目6</div>
+	</div>
+	<p>grid-row-gap:20px;</p>
+	<div class="container--3">
+		<div class="item">項目1</div>
+		<div class="item">項目2</div>
+		<div class="item">項目3</div>
+		<div class="item">項目4</div>
+		<div class="item">項目5</div>
+		<div class="item">項目6</div>
+	</div>
+</body>
+
+</html>

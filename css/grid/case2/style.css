@@ -5,7 +5,11 @@ body {
 
 .container {
 	display: grid;
-	grid-template-columns: 200px 200px 200px;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container--2 {
+	grid-template-columns: 2fr 1fr 1fr;
 }
 
 .item {
