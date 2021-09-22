@@ -63,6 +63,7 @@
       <li><a href="https://takashitanaka.github.io/practice/js/library/swiper/">swiper</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/jquery-cookie/">jquery-cookie</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/js-cookie/">js-cookie</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/js/library/browserSync/">browserSync</a></li>
     </ul>
     <h3>タスクランナー</h3>
     <ul>
