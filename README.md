@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body> 
-    <p>テスト！！！！</p>
     <h1>学習記録</h1>
     <p>主にチュートリアルや参考書から学んだ事をアウトプットするリポジトリです。<br>下記、言語別に実装したgithubページを公開しています。</p>
     <h2>HTML & CSS</h2>
@@ -31,6 +30,7 @@
       <li><a href="https://takashitanaka.github.io/practice/html/viewport/index.html">viewportのテスト</a></li>
       <li><a href="https://takashitanaka.github.io/practice/css/vertical-typo/index.html">縦組みのテスト</a></li>
       <li><a href="https://takashitanaka.github.io/practice/css/cover-image/index.html">背景画像のテスト</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/css/grid/">Gridのテスト</a></li>
     </ul>
     <h2>Javascript</h2>
     <h3>Dotinstallで学んだもの</h3>
