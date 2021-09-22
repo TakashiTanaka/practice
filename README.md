@@ -60,7 +60,9 @@
       <li><a href="https://takashitanaka.github.io/practice/js/library/slickjs/index.html">Slick.js</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/gsap/">gsap</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/animeJs/index.html">animejs</a></li>
-      <li><a href="https://takashitanaka.github.io/practice/js/library/swiper/index.html">swiper</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/js/library/swiper/">swiper</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/js/library/jquery-cookie/">jquery-cookie</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/js/library/js-cookie/">js-cookie</a></li>
     </ul>
     <h3>タスクランナー</h3>
     <ul>
