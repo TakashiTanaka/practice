@@ -94,9 +94,10 @@
       <li><a href="https://takashitanaka.github.io/practice/php/php-intro/">PHP入門</a></li>
       <li><a href="https://takashitanaka.github.io/practice/php/php-basic/">PHP基礎</a></li>
     </ul>
-    <h3>フレームワーク
+    <h3>フレームワーク</h3>
+    <ul>
       <li><a href="https://takashitanaka.github.io/practice/php/frame-work/laravel8/">Laravel8 入門</a></li>
-    </h3>
+    </ul>
     <h2>Other</h2>
     <ul>
       <li><a href="https://takashitanaka.github.io/practice/other/git/">git</a></li>
