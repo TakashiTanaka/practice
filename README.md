@@ -81,7 +81,7 @@
     </ul>
     <h3>テンプレートエンジン</h3>
     <ul> 
-      <li><a href="https://takashitanaka.github.io/practice/js/template-engine/pug/index.html">Pug入門</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/js/template-engine/pug/">Pug入門</a></li>
     </ul>
     <h3>フレームワーク</h3>
     <ul> 
@@ -94,6 +94,9 @@
       <li><a href="https://takashitanaka.github.io/practice/php/php-intro/">PHP入門</a></li>
       <li><a href="https://takashitanaka.github.io/practice/php/php-basic/">PHP基礎</a></li>
     </ul>
+    <h3>フレームワーク
+      <li><a href="https://takashitanaka.github.io/practice/php/frame-work/laravel8/">Laravel8 入門</a></li>
+    </h3>
     <h2>Other</h2>
     <ul>
       <li><a href="https://takashitanaka.github.io/practice/other/git/">git</a></li>
