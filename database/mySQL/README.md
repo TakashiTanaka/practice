@@ -1,0 +1,2 @@
+# mySOL入門
+dotinstallでmySQLの入門基礎編を勉強しました
