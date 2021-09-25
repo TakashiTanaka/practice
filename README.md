@@ -107,6 +107,7 @@
       <li><a href="https://takashitanaka.github.io/practice/other/svg/">SVGの練習</a></li>
       <li><a href="https://takashitanaka.github.io/practice/other/docker/">Docker入門</a></li>
       <li><a href="https://takashitanaka.github.io/practice/other/vagrant/">Vagrant入門</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/other/vim/">Vim入門</a></li>
     </ul>
   </body>
 </html>
