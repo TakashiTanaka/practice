@@ -55,7 +55,7 @@
     <h3>jsライブラリ</h3>
     <ul>
       <li><a href="https://takashitanaka.github.io/practice/js/library/datGUI/index.html">dat.GUI</a></li>
-      <li><a href="https://takashitanaka.github.io/practice/js/library/threejs/basic/">three.js</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/js/library/threejs/">three.js</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/jquery/index.html">jQuery</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/slickjs/index.html">Slick.js</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/gsap/">gsap</a></li>
@@ -86,8 +86,8 @@
     <h3>フレームワーク</h3>
     <ul> 
       <li><a href="https://takashitanaka.github.io/practice/js/frame-work/gatsbyTest/index.html">gatsby入門</a></li>
-      <li><a href="https://takashitanaka.github.io/practice/js/frame-work/react/index.html">react入門</a></li>
-      <li><a href="https://takashitanaka.github.io/practice/js/frame-work/react-handson/index.html">React Handson</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/js/frame-work/react/">react入門</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/js/frame-work/react-handson/">React Handson</a></li>
     </ul>
     <h2>PHP</h2>
     <ul>
