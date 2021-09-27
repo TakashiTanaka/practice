@@ -225,3 +225,99 @@ SQLとはStructured Query Languageのこと
 	// ROUNDの小数点以下の桁数指定（例：2桁にする場合）
 	SELECT ROUND(カラム名 * 500 / 3, 2) FROM テーブル名
 	```
+
+- 文字列の加工
+	```
+	// SUBSTRING -> 文字列抽出
+	// 先頭から3文字分
+	SELECT SUBSTRING(カラム名, 3) FROM テーブル名
+	// 3文字目から2文字分
+	SELECT SUBSTRING(カラム名, 3, 2) FROM テーブル名
+	// 末尾から二文字分
+	SELECT SUBSTRING(カラム名, -2) FROM テーブル名
+
+	// CONCAT -> 文字列連結
+	// 値同士を-で繋ぐ例
+	SELECT SUBSTRING(カラム名, '-', 'カラム名') FROM テーブル名
+
+	// LENGTH -> 文字数
+	SELECT LENGTH(カラム名) FROM テーブル名
+
+	// CHAR_LENGTH -> マルチバイト対応の文字数
+	SELECT CHAR_LENGTH(カラム名) FROM テーブル名
+
+	// UPPER -> 大文字に変換
+	SELECT UPPER(カラム名) FROM テーブル名
+	```
+
+- 日時
+	```
+	// 年
+	SELECT YEAR(カラム名) FROM テーブル名
+
+	// 月
+	SELECT MONTH(カラム名) FROM テーブル名
+
+	// 日
+	SELECT DAY(カラム名) FROM テーブル名
+	
+	// 日付形式の指定
+	SELECT DATE_FORMAT(カラム名, フォーマット) FROM テーブル名
+
+	// 日付の計算（例：7日後の値を取得）
+	SELECT DATE_ADD(カラム名, INTERVAL 7 DAY) FROM テーブル名
+
+	// 現在の日付と比較
+	SELECT DATEDIFF(カラム名, NOW()) FROM テーブル名
+	```
+
+- UPDATE
+	元のデータを更新する
+	```
+	// 元のデータの値を更新する
+	UPDATE テーブル名 SET カラム名 = 値;
+
+	// 条件をつけて元のデータの値を更新する
+	UPDATE テーブル名 SET カラム名 = 値 WHERE 条件;
+
+	// 複数のカラムの値を更新する
+	UPDATE テーブル名 SET カラム名 = 値, カラム名 = 値...
+	```
+
+- DELETE
+	レコードの削除
+	```
+	DELETE FROM テーブル名 WHERE 条件;
+	```
+
+- TRUNCATE TABLE
+	連番をリセットしてテーブル作成
+	```
+	TRUNCATE TABLE テーブル名
+	```
+
+- DEFAULT NOW
+	```
+
+	```
+
+- ALTER TABLE
+	```
+	// カラムを挿入
+	ALTER TABLE テーブル名 ADD カラム名 型;
+
+	// カラムを挿入（位置の指定）
+	ALTER TABLE テーブル名 ADD カラム名 型 AFTER カラム名;
+
+	// カラムを挿入（テーブルの最初に挿入）
+	ALTER TABLE テーブル名 ADD カラム名 型 FIRST;
+
+	// カラムの削除
+	ALTER TABLE テーブル名 DROP カラム名;
+
+	// カラムの名前と型を変更
+	ALTER TABLE テーブル名 CHANGE 変更前カラム名 変更後カラム名 型;
+
+	// テーブル名の変更
+	ALTER TABLE 変更前テーブル名 RENAME 変更後テーブル名;
+	```
