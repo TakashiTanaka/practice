@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>4.2.3 配列から子要素を生成する | React Sample</title>
+</head>
+
+<body>
+	<div id="root"></div>
+	<script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+	<script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+	<script>
+		// レシピの材料のコンポーネント（材料のデータを分離）
+		function IngredientsList({ items }) {
+			return React.createElement(
+				"ul",
+				{ className: "ingredients" },
+				items.map((ingredient, i) =>
+					React.createElement("li", { key: i }, ingredient))
+			);
+		}
+
+		const items = [
+			"1 cup unsalted butter",
+			"1 cup crunchy peanut butter",
+			"1 cup brown sugar",
+			"1 cup white sugar",
+			"2 eggs",
+			"2.5 cups all purpose flour",
+			"1 teaspoon baking powder",
+			"0.5 teaspoon salt"
+		];
+
+		// ここで{ items }プロパティを設定することでIngredientsListの引数にitemsを代入できる
+		ReactDOM.render(
+			React.createElement(IngredientsList, { items }, null),
+			document.getElementById("root")
+		);
+	</script>
+</body>
+
+</html>
