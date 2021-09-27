@@ -55,7 +55,7 @@
     <h3>jsライブラリ</h3>
     <ul>
       <li><a href="https://takashitanaka.github.io/practice/js/library/datGUI/index.html">dat.GUI</a></li>
-      <li><a href="https://takashitanaka.github.io/practice/js/library/threejs/index.html">three.js</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/js/library/threejs/basic/">three.js</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/jquery/index.html">jQuery</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/slickjs/index.html">Slick.js</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/gsap/">gsap</a></li>
