@@ -5,8 +5,11 @@ dotinstallでMySQLの入門基礎編を勉強しました
 SQLとはStructured Query Languageのこと
 
 ## 用語
-- テーブル -> 表
-- レコード -> 行
+- テーブル -  表
+
+## 用語
+- テーブル -  表
+- レコード > 行
 - カラム -> 列
 
 ## 基本知識
@@ -118,3 +121,107 @@ SQLとはStructured Query Languageのこと
 
 - AUTO_INCREMENT
 	PRIMARY KEYが設定されている場合、カラムにAUTO_INCREMENTをつけると、自動的に連番にしてくれる
+
+- SELECT
+	データを抽出する
+	```
+	// 全てのデータを抽出
+	SELECT * FROM テーブル名;
+
+	// 特定のカラムのデータを抽出（複数選択の場合はカンマ区切り）
+	SELECT カラム名, カラム名 FROM テーブル名;
+	```
+
+- WHERE
+	条件にマッチしたデータを抽出する
+	```
+	// WHEREの後に条件を記述
+	SELECT * FROM テーブル名 WHERE 条件;
+	```
+
+- AND, BETWEEN, OR, IN
+	```
+	// 10以下かつ20以下
+	SELECT * FROM テーブル名 WHERE カラム名 >=10 AND カラム名 <= 20;
+
+	// 上記と同じ内容をBETWEENで表現
+	SELECT * FROM テーブル名 WHERE カラム名 BETWEEN 10 AND 20;
+
+	// BETWEENの条件を反転させる
+	SELECT * FROM テーブル名 WHERE カラム名 NOT BETWEEN 10 AND 20;
+
+	// 10 もしくは 20
+	SELECT * FROM テーブル名 WHERE カラム名 = 10 OR カラム名 = 20;
+
+	// 上記と同じ内容をINで表現
+	SELECT * FROM テーブル名 WHERE カラム名 IN (10, 20)
+
+	// INの条件を反転させる
+	SELECT * FROM テーブル名 WHERE カラム名 NOT IN (10, 20)
+	```
+
+- LIKE, %, _, BINARY
+	% -> 0文字以上の任意の文字
+	_ -> 任意の一文字
+
+	```
+	// tから始まる文字列を抽出
+	SELECT * FROM テーブル名 WHERE カラム名 LIKE 't%';
+
+	// 大文字／小文字を区別したい場合はBINARYをつける
+	SELECT * FROM テーブル名 WHERE カラム名 LIKE BINARY 't%';
+
+	// 3文字目がaでそれ以降は0文字以上の任意の文字
+	SELECT * FROM テーブル名 WHERE カラム名 LIKE '__a%';
+
+	// _と%自体を文字列として扱う場合（エスケープ処理）
+	// %を文字列内に含むデータを抽出する例
+	SELECT * FROM テーブル名 WHERE カラム名 LIKE '%\%%';
+	```
+
+- IS NULL, IS NOT NULL
+	NULLのレコードも抽出したい場合、IS NULLも条件に含める
+	```
+	// 10ではないもしくは、NULLのデータを全て抽出
+	SELECT * FROM テーブル名 WHERE カラム名 != 10 OR カラム名 IS NULL;
+	
+	// IS NULLを反転させる場合はNOTをつける
+	SELECT * FROM テーブル名 WHERE カラム名 != 10 OR カラム名 IS NOT NULL;
+	```
+
+- ORDER BY, DESC, LIMIT, OFFSET
+	```
+	// 小さい順に並び替え
+	SELECT * FROM テーブル名 ORDER BY カラム名;
+
+	// 大きい順に並び替え
+	SELECT * FROM テーブル名 ORDER BY カラム名 DESC;
+
+	// 最初の指定したカラムが同値だった時の他のカラムの順序を指定
+	SELECT * FROM テーブル名 ORDER BY カラム名 DESC, 他のカラム名;
+
+	// 任意の上位件数を抽出する
+	// 上位三件を抽出
+	SELECT * FROM テーブル名 ORDER BY カラム名 DESC, 他のカラム名 LIMIT 3;
+
+	// 特定の位置から上位件数を抽出する
+	// 上位2件を除外した上で、上位3件抽出
+	SELECT * FROM テーブル名 ORDER BY カラム名 DESC, 他のカラム名 LIMIT 3 OFFSET 2;
+	SELECT * FROM テーブル名 ORDER BY カラム名 DESC, 他のカラム名 LIMIT 2, 3;
+	```
+
+- 四則演算
+	```
+	// 抽出したデータを利用して四則演算
+	SELECT カラム名 * 500 / 3 FROM テーブル名
+
+	// ASを利用して結果のカラムを別名で表示
+	ELECT カラム名 * 500 / 3 AS カラム別名 FROM テーブル名
+	
+	// FLOOR（端数切捨て）, CEIL（端数切り上げ）, ROUND（四捨五入）
+	SELECT FLOOR(カラム名 * 500 / 3) FROM テーブル名
+	SELECT CEIL(カラム名 * 500 / 3) FROM テーブル名
+	SELECT ROUND(カラム名 * 500 / 3) FROM テーブル名
+	// ROUNDの小数点以下の桁数指定（例：2桁にする場合）
+	SELECT ROUND(カラム名 * 500 / 3, 2) FROM テーブル名
+	```
