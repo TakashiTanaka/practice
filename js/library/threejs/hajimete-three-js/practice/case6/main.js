@@ -1,63 +1,39 @@
-import * as THREE from 'three';
-
-// シーンの作成
-// シーンの表示にはカメラ、ライト、オブジェクトが必要
-let scene;
-let camera;
-let renderer;
+// インテリセンスを有効化
+// import * as THREE from '@types/three';
 
 function init() {
 	let stats = initStats();
-	scene = new THREE.Scene();
-	camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+	let scene = new THREE.Scene();
+	let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+	scene.add(camera);
 
 	renderer = new THREE.WebGLRenderer();
 	renderer.setClearColor(new THREE.Color(0xEEEEEE));
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	renderer.shadowMap.enabled = true;
 
-	let axes = new THREE.AxisHelper(20);
-	scene.add(axes);
-
-	let planeGeometry = new THREE.PlaneGeometry(60, 20);
-	let planeMaterial = new THREE.MeshLambertMaterial({ color: 0xcccccc });
+	let planeGeometry = new THREE.PlaneGeometry(60, 40, 1, 1);
+	let planeMaterial = new THREE.MeshLambertMaterial({ color: 0xffffff });
 	let plane = new THREE.Mesh(planeGeometry, planeMaterial);
 	plane.receiveShadow = true;
 
 	plane.rotation.x = -0.5 * Math.PI;
-	plane.position.x = 15;
+	plane.position.x = 0;
 	plane.position.y = 0;
 	plane.position.z = 0;
 
 	scene.add(plane);
-
-	let cubeGeometry = new THREE.BoxGeometry(4, 4, 4);
-	let cubeMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
-	let cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-	cube.castShadow = true;
-
-	cube.position.x = -4;
-	cube.position.y = 3;
-	cube.position.z = 0;
-
-	scene.add(cube);
-
-	let sphereGeometry = new THREE.SphereGeometry(4, 20, 20);
-	let sphereMaterial = new THREE.MeshLambertMaterial({ color: 0x7777ff });
-	let sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-	sphere.castShadow = true;
-
-	sphere.position.x = 20;
-	sphere.position.y = 4;
-	sphere.position.z = 2;
-
-	scene.add(sphere);
 
 	camera.position.x = -30;
 	camera.position.y = 40;
 	camera.position.z = 20;
 	camera.lookAt(scene.position);
 
+	// アンビエントライトを追加
+	let ambientLight = new THREE.AmbientLight(0x0c0c0c);
+	scene.add(ambientLight);
+
+	// スポットライトを追加
 	let spotLight = new THREE.SpotLight(0xffffff);
 	spotLight.position.set(-20, 30, -5);
 	spotLight.castShadow = true;
@@ -68,28 +44,69 @@ function init() {
 	let step = 0;
 
 	let controls = new function () {
+		// 回転速度
 		this.rotationSpeed = 0.02;
-		this.bouncingSpeed = 0.03;
-	};
+
+		// シーン内のオブジェクトの数
+		this.numberOfObjects = scene.children.length;
+
+		// 立方体を削除する関数
+		this.removeCube = () => {
+			let allChildren = scene.children;
+			let lastObject = allChildren[allChildren.length - 1];
+			// 関数が実行され、lastObjectがTHREE.Meshオブジェクトだったら削除
+			if (lastObject instanceof THREE.Mesh) {
+				scene.remove(lastObject);
+				this.numberOfObjects = scene.children.length;
+			}
+		}
+
+		// 立方体を追加する関数
+		this.addCube = () => {
+			let cubeSize = Math.ceil((Math.random() * 3));
+			let cubeGeometry = new THREE.BoxGeometry(cubeSize, cubeSize, cubeSize);
+			let cubeMaterial = new THREE.MeshLambertMaterial({ color: Math.random() * 0xffffff });
+			let cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+			cube.castShadow = true;
+			// 追加する立方体に名前をつけて、管理しやすくする
+			// THREE.Scene.getObjectByName()関数で取得できるようになる
+			cube.name = "cube-" + scene.children.length;
+
+			cube.position.x = -30 + Math.round((Math.random() * planeGeometry.parameters.width));
+			cube.position.y = Math.round((Math.random() * 5));
+			cube.position.z = -20 + Math.round((Math.random() * planeGeometry.parameters.height));
+
+			scene.add(cube);
+			this.numberOfObjects = scene.children.length;
+		}
+
+		// オブジェクトの情報をコンソールに表示する関数
+		this.outputObjects = () => {
+			console.log(scene.children);
+		}
+	}
 
 	let gui = new dat.GUI();
 	gui.add(controls, 'rotationSpeed', 0, 0.5);
-	gui.add(controls, 'bouncingSpeed', 0, 0.5);
+	gui.add(controls, 'addCube');
+	gui.add(controls, 'removeCube');
+	gui.add(controls, 'outputObjects');
+	gui.add(controls, 'numberOfObjects').listen();
 
-	renderScene();
+	render();
 
-	// ここはp5で言うところのfunction draw()みたいな感じ
-	function renderScene() {
+	function render() {
 		stats.update();
 
-		cube.rotation.x += controls.rotationSpeed;
-		cube.rotation.y += controls.rotationSpeed;
-		cube.rotation.z += controls.rotationSpeed;
+		scene.traverse(function (obj) {
+			if (obj instanceof THREE.Mesh && obj != plane) {
+				obj.rotation.x += controls.rotationSpeed;
+				obj.rotation.y += controls.rotationSpeed;
+				obj.rotation.z += controls.rotationSpeed;
+			}
+		});
 
-		step += controls.bouncingSpeed;
-		sphere.position.x = 20 + (10 * Math.cos(step));
-		sphere.position.y = 2 + (10 * Math.abs(Math.sin(step)));
-		requestAnimationFrame(renderScene);
+		requestAnimationFrame(render);
 		renderer.render(scene, camera);
 	}
 
@@ -102,16 +119,6 @@ function init() {
 		document.getElementById("Stats-output").appendChild(stats.domElement);
 		return stats;
 	}
-
-}
-function onResize() {
-	camera.aspect = window.innerWidth / window.innerHeight;
-	camera.updateProjectionMatrix();
-	renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-
-window.onload = init
-
-window.addEventListener('resize', onResize, false);
-
+window.onload = init;

@@ -1,7 +1,6 @@
-
-// once everything is loaded, we run our Three.js stuff.
 function init() {
 
+	// initStatsを実行
 	let stats = initStats();
 
 	let scene = new THREE.Scene();
@@ -67,6 +66,7 @@ function init() {
 
 	// ここはp5で言うところのfunction draw()みたいな感じ
 	function renderScene() {
+		// statsを更新
 		stats.update();
 
 		cube.rotation.x += 0.02;
@@ -76,13 +76,18 @@ function init() {
 		step += 0.04;
 		sphere.position.x = 20 + (10 * Math.cos(step));
 		sphere.position.y = 2 + (10 * Math.abs(Math.sin(step)));
+
+		// requestAnimationFrame関数で引数に渡した関数を繰り返し実行
 		requestAnimationFrame(renderScene);
 		renderer.render(scene, camera);
 	}
 
+	// 1秒ごとのフレーム数を表示してくれるヘルパーライブラリを使う
 	function initStats() {
 		let stats = new Stats();
+		// setModeは0だと秒間のフレーム数、1にすると描画時間を測定
 		stats.setMode(0);
+		// 位置を指定
 		stats.domElement.style.position = 'absolute';
 		stats.domElement.style.left = '0px';
 		stats.domElement.style.top = '0px';
@@ -91,5 +96,6 @@ function init() {
 	}
 
 }
+
 window.onload = init
 
