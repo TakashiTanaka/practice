@@ -1,3 +1,4 @@
+// 全てのコンポーネントの親要素である、App.jsのみuseStateを使うようにする
 import React, { useState } from "react";
 import colorData from "./color-data.json";
 import ColorList from "./ColorList.js";
