@@ -22,3 +22,8 @@ https://dotinstall.com/lessons/basic_threejs_v2
 - [1.6 初めてのシーンをアニメーション拡張](./hajimete-three-js/practice/case3/index.html)
 - [1.7 dat.GUIを利用](./hajimete-three-js/practice/case4/index.html)
 - [1.8 ブラウザサイズの変更に対応](./hajimete-three-js/practice/case5/index.html)
+- [2.1.1 シーンの作成とオブジェクトの追加](./hajimete-three-js/practice/case6/index.html)
+- [2.1.2 フォグの追加](./hajimete-three-js/practice/case7/index.html)
+- [2.1.3 overrideMaterialの利用](./hajimete-three-js/practice/case8/index.html)
+- [番外1 BufferGeometryを使ったジオメトリの構築](./hajimete-three-js/practice/case9/index.html)
+- [番外2 番外1の方法をsetIndexでもう少しスマートに書く](./hajimete-three-js/practice/case10/index.html)
