@@ -1,0 +1,27 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	line-height: 1.75;
+	letter-spacing: 0.125;
+}
+
+section {
+	padding: 2em 0;
+}
+
+.text1 {
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, serif;
+}
+
+.text2 {
+	font-family: YakuHanJP, "Franklin Gothic Medium", "Arial Narrow", Arial, serif;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 32px;
+	max-width: 600px;
+}
