@@ -4,12 +4,19 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:webpack": "webpack --watch",
+    "serve": "live-server",
+    "start": "npm run watch:webpack & npm run serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "parallax-js": "^3.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0"
   }
 }

@@ -4,16 +4,82 @@ body {
 }
 
 .scene {
-	background-color: beige;
+	background-color: black;
 	width: 100%;
 	height: 100vh;
+	overflow: hidden;
 }
 
-.bg-1 {
-	background-color: brown;
-	height: 200px;
+.layer {
+	width: 100%;
+	height: 100%;
 }
-.bg-1 {
-	background-color: brown;
+
+.box {
+	position: absolute;
+}
+
+.box-1 {
+	background-color: pink;
+	width: 200px;
 	height: 200px;
+	bottom: 0;
+	animation: pendulum 2s infinite;
+}
+
+.box-2 {
+	background-color: darkgreen;
+	width: 600px;
+	height: 800px;
+	right: 0;
+	animation: pendulum 1s infinite;
+}
+
+.box-3 {
+	background-color: cadetblue;
+	width: 500px;
+	height: 100px;
+	left: 0;
+	top: 100px;
+	animation: pendulum 5s infinite;
+}
+
+.box-4 {
+	background-color: darkgoldenrod;
+	width: 100px;
+	height: 500px;
+	right: 200px;
+	bottom: 100px;
+	animation: pendulum 3s infinite;
+}
+
+.content {
+	background-color: crimson;
+	height: 200vh;
+}
+
+.text-inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.text {
+	font-size: 20vw;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	animation: pendulum 10s infinite;
+	color: khaki;
+}
+
+@keyframes pendulum {
+	0% {
+		transform: rotate(20deg);
+	}
+	50% {
+		transform: rotate(-20deg);
+	}
+	100% {
+		transform: rotate(20deg);
+	}
 }

@@ -11,17 +11,26 @@
 
 <body>
 	<div class="scene" id="scene">
-		<div class="bg-1"></div>
-		<div class="bg-2"></div>
-		<div class="bg-3"></div>
-		<div class="bg-4"></div>
-		<div class="bg-5"></div>
-		<div class="bg-6"></div>
-		<div class="bg-7"></div>
-		<div class="bg-8"></div>
-		<div class="bg-9"></div>
+		<div data-depth="0.5" class="layer">
+			<div class="box box-1"></div>
+		</div>
+		<div data-depth="0.4" class="layer">
+			<div class="box box-2"></div>
+		</div>
+		<div data-depth="0.3" class="layer">
+			<div class="box box-3"></div>
+		</div>
+		<div data-depth="0.2" class="layer">
+			<div class="box box-4"></div>
+		</div>
+		<div data-depth="0.1" class="layer">
+			<div class="text-inner">
+				<div class="text">Parallax!</div>
+			</div>
+		</div>
 	</div>
-	<script src="main.js"></script>
+	<div class="content">content</div>
+	<script src="main.js" type="module"></script>
 </body>
 
 </html>
