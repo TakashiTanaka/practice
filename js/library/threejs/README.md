@@ -1,13 +1,6 @@
 # Three.js
 
-ドットインストールで紹介されていた、  
-Three.jsを実践しました。
-
-制作物URL  
-https://takashitanaka.github.io/practice/js-practice/threejs-practice/index.html
-
-参考URL  
-https://dotinstall.com/lessons/basic_threejs_v2
+Three.jsの練習
 
 ## 基礎
 - [PART 1基本](./basic/three-1.html)
@@ -15,6 +8,8 @@ https://dotinstall.com/lessons/basic_threejs_v2
 - [PART 3シャドウ](./basic/three-3.html)
 - [PART 4テクスチャ](./basic/three-4.html)
 - [PART 5テキスト](./basic/three-5.html)
+参考URL  
+https://dotinstall.com/lessons/basic_threejs_v2
 
 ## はじめてのThree.js練習
 - [1.4 3Dオブジェクトの表示](./hajimete-three-js/practice/case1/index.html)
