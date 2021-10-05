@@ -1,6 +1,8 @@
 // インテリセンスを有効化
 import * as THREE from 'three';
-import 'three/examples/jsm/utils/SceneUtils.js';
+
+// 色々外部ファイル化しているようで、使用したい場合読み込まないとだめ
+import * as SceneUtils from 'three/examples/jsm/utils/SceneUtils.js';
 
 function init() {
 	let stats = initStats();
@@ -110,19 +112,26 @@ function init() {
 		20, 21, 22, 22, 21, 23, // bottom
 	]);
 
-	function makeInstance(geometry, x) {
-		const material = [new THREE.MeshLambertMaterial({ opacity: 0.6, color: 0x44ff44, transparent: true }), new THREE.MeshBasicMaterial({ color: 0x000000, wireframe: true })];
-		let cube = THREE.SceneUtils.createMultiMaterialObject(geometry, material);
-		scene.add(cube);
-		cube.position.x = -30 + Math.round((Math.random() * planeGeometry.parameters.width));
-		cube.position.z = -20 + Math.round((Math.random() * planeGeometry.parameters.height));
-		cube.position.y = 1;
-		return cube;
-	}
+	const material = [
+		new THREE.MeshLambertMaterial({
+			opacity: 0.6, color: 0x44ff44, transparent: true
+		}),
+		new THREE.MeshBasicMaterial({
+			color: 0x000000, wireframe: true
+		})
+	];
 
-	for (let i = 0; i < 100; i++) {
-		makeInstance(geom);
-	};
+	// createMultiMaterialObjectを使って指定されたマテリアル用にそれぞれひとつずつメッシュを作成。
+	// それらのメッシュをグループにまとめる
+	let cube = new SceneUtils.createMultiMaterialObject(geom, material);
+	scene.add(cube);
+
+	cube.position.x = 0;
+	cube.position.z = 0;
+	cube.position.y = 1;
+
+	// グループなので、例えば影を落とす場合はforEachとかで子要素に対してcastShadowする
+	// cube.children.forEach(e => e.castShadow = true);
 
 	function render() {
 		stats.update();

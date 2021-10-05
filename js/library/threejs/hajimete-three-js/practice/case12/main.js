@@ -50334,87 +50334,6 @@ if ( typeof window !== 'undefined' ) {
 
 
 
-/***/ }),
-
-/***/ "./node_modules/three/examples/jsm/utils/SceneUtils.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/three/examples/jsm/utils/SceneUtils.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createMeshesFromInstancedMesh": () => (/* binding */ createMeshesFromInstancedMesh),
-/* harmony export */   "createMultiMaterialObject": () => (/* binding */ createMultiMaterialObject),
-/* harmony export */   "detach": () => (/* binding */ detach),
-/* harmony export */   "attach": () => (/* binding */ attach)
-/* harmony export */ });
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-
-
-
-
-function createMeshesFromInstancedMesh( instancedMesh ) {
-
-	const group = new three__WEBPACK_IMPORTED_MODULE_0__.Group();
-
-	const count = instancedMesh.count;
-	const geometry = instancedMesh.geometry;
-	const material = instancedMesh.material;
-
-	for ( let i = 0; i < count; i ++ ) {
-
-		const mesh = new three__WEBPACK_IMPORTED_MODULE_0__.Mesh( geometry, material );
-
-		instancedMesh.getMatrixAt( i, mesh.matrix );
-		mesh.matrix.decompose( mesh.position, mesh.quaternion, mesh.scale );
-
-		group.add( mesh );
-
-	}
-
-	group.copy( instancedMesh );
-	group.updateMatrixWorld(); // ensure correct world matrices of meshes
-
-	return group;
-
-}
-
-function createMultiMaterialObject( geometry, materials ) {
-
-	const group = new three__WEBPACK_IMPORTED_MODULE_0__.Group();
-
-	for ( let i = 0, l = materials.length; i < l; i ++ ) {
-
-		group.add( new three__WEBPACK_IMPORTED_MODULE_0__.Mesh( geometry, materials[ i ] ) );
-
-	}
-
-	return group;
-
-}
-
-function detach( child, parent, scene ) {
-
-	console.warn( 'THREE.SceneUtils: detach() has been deprecated. Use scene.attach( child ) instead.' );
-
-	scene.attach( child );
-
-}
-
-function attach( child, scene, parent ) {
-
-	console.warn( 'THREE.SceneUtils: attach() has been deprecated. Use parent.attach( child ) instead.' );
-
-	parent.attach( child );
-
-}
-
-
-
-
-
-
 /***/ })
 
 /******/ 	});
@@ -50477,31 +50396,29 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 /*!****************************!*\
-  !*** ./case11/src/main.js ***!
+  !*** ./case12/src/main.js ***!
   \****************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* harmony import */ var three_examples_jsm_utils_SceneUtils_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three/examples/jsm/utils/SceneUtils.js */ "./node_modules/three/examples/jsm/utils/SceneUtils.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
 // インテリセンスを有効化
 
 
-// 色々外部ファイル化しているようで、使用したい場合読み込まないとだめ
-
+// メッシュを作るにはジオメトリとマテリアルが必要
 
 function init() {
 	let stats = initStats();
-	let scene = new three__WEBPACK_IMPORTED_MODULE_1__.Scene();
-	let camera = new three__WEBPACK_IMPORTED_MODULE_1__.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+	let scene = new three__WEBPACK_IMPORTED_MODULE_0__.Scene();
+	let camera = new three__WEBPACK_IMPORTED_MODULE_0__.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
 	scene.add(camera);
 
-	let renderer = new three__WEBPACK_IMPORTED_MODULE_1__.WebGLRenderer();
-	renderer.setClearColor(new three__WEBPACK_IMPORTED_MODULE_1__.Color(0xEEEEEE));
+	let renderer = new three__WEBPACK_IMPORTED_MODULE_0__.WebGLRenderer();
+	renderer.setClearColor(new three__WEBPACK_IMPORTED_MODULE_0__.Color(0xEEEEEE));
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	renderer.shadowMap.enabled = true;
 
-	let planeGeometry = new three__WEBPACK_IMPORTED_MODULE_1__.PlaneGeometry(60, 40, 1, 1);
-	let planeMaterial = new three__WEBPACK_IMPORTED_MODULE_1__.MeshLambertMaterial({ color: 0xffffff });
-	let plane = new three__WEBPACK_IMPORTED_MODULE_1__.Mesh(planeGeometry, planeMaterial);
+	let planeGeometry = new three__WEBPACK_IMPORTED_MODULE_0__.PlaneGeometry(60, 40, 1, 1);
+	let planeMaterial = new three__WEBPACK_IMPORTED_MODULE_0__.MeshLambertMaterial({ color: 0xffffff });
+	let plane = new three__WEBPACK_IMPORTED_MODULE_0__.Mesh(planeGeometry, planeMaterial);
 	plane.receiveShadow = true;
 
 	plane.rotation.x = -0.5 * Math.PI;
@@ -50517,109 +50434,40 @@ function init() {
 	camera.lookAt(scene.position);
 
 	// アンビエントライトを追加
-	let ambientLight = new three__WEBPACK_IMPORTED_MODULE_1__.AmbientLight(0x0c0c0c);
+	let ambientLight = new three__WEBPACK_IMPORTED_MODULE_0__.AmbientLight(0x0c0c0c);
 	scene.add(ambientLight);
 
 	// スポットライトを追加
-	let spotLight = new three__WEBPACK_IMPORTED_MODULE_1__.SpotLight(0xffffff);
+	let spotLight = new three__WEBPACK_IMPORTED_MODULE_0__.SpotLight(0xffffff);
 	spotLight.position.set(-20, 30, -5);
 	spotLight.castShadow = true;
 	scene.add(spotLight);
+
+	// boxジオメトリを追加
+	let cubeGeo = new three__WEBPACK_IMPORTED_MODULE_0__.BoxGeometry(1, 1, 1);
+	let cubeMaterial = new three__WEBPACK_IMPORTED_MODULE_0__.MeshLambertMaterial({ color: 0xffffff });
+	let cube = new three__WEBPACK_IMPORTED_MODULE_0__.Mesh(cubeGeo, cubeMaterial);
+
+	// positionは親要素からの相対位置で指定する
+	// cube.position.x = 0;
+	// cube.position.y = 1;
+	// cube.position.z = 0;
+
+	// このように指定することもできる上と同じ意味
+	cube.position.set(0, 1, 0);
+
+	// 角度もpositionと同じような感じで設定する
+	cube.rotation.x = 0.8 * Math.PI;
+
+	scene.add(cube);
 
 	document.getElementById("WebGL-output").appendChild(renderer.domElement);
 
 	render();
 
-
-	// https://threejsfundamentals.org/threejs/lessons/ja/threejs-custom-buffergeometry.html
-	// case9をもっといい感じに書く方法
-	// 立方体を作る
-	// 重複しているデータを消す。トータルで24個の点となる
-	const vertices = [
-		// front
-		{ pos: [-1, -1, 1], norm: [0, 0, 1], uv: [0, 0], }, // 0
-		{ pos: [1, -1, 1], norm: [0, 0, 1], uv: [1, 0], }, // 1
-		{ pos: [-1, 1, 1], norm: [0, 0, 1], uv: [0, 1], }, // 2
-		{ pos: [1, 1, 1], norm: [0, 0, 1], uv: [1, 1], }, // 3
-		// right
-		{ pos: [1, -1, 1], norm: [1, 0, 0], uv: [0, 0], }, // 4
-		{ pos: [1, -1, -1], norm: [1, 0, 0], uv: [1, 0], }, // 5
-		{ pos: [1, 1, 1], norm: [1, 0, 0], uv: [0, 1], }, // 6
-		{ pos: [1, 1, -1], norm: [1, 0, 0], uv: [1, 1], }, // 7,
-		// back
-		{ pos: [1, -1, -1], norm: [0, 0, -1], uv: [0, 0], }, // 8 
-		{ pos: [-1, -1, -1], norm: [0, 0, -1], uv: [1, 0], }, // 9
-		{ pos: [1, 1, -1], norm: [0, 0, -1], uv: [0, 1], }, // 10
-		{ pos: [-1, 1, -1], norm: [0, 0, -1], uv: [1, 1], }, // 11
-		// left
-		{ pos: [-1, -1, -1], norm: [-1, 0, 0], uv: [0, 0], }, // 12
-		{ pos: [-1, -1, 1], norm: [-1, 0, 0], uv: [1, 0], }, // 13
-		{ pos: [-1, 1, -1], norm: [-1, 0, 0], uv: [0, 1], }, // 14
-		{ pos: [-1, 1, 1], norm: [-1, 0, 0], uv: [1, 1], }, // 15
-		// top
-		{ pos: [1, 1, -1], norm: [0, 1, 0], uv: [0, 0], }, // 16
-		{ pos: [-1, 1, -1], norm: [0, 1, 0], uv: [1, 0], }, // 17
-		{ pos: [1, 1, 1], norm: [0, 1, 0], uv: [0, 1], }, // 18
-		{ pos: [-1, 1, 1], norm: [0, 1, 0], uv: [1, 1], }, // 19,
-		// bottom
-		{ pos: [1, -1, 1], norm: [0, -1, 0], uv: [0, 0], }, // 20
-		{ pos: [-1, -1, 1], norm: [0, -1, 0], uv: [1, 0], }, // 21
-		{ pos: [1, -1, -1], norm: [0, -1, 0], uv: [0, 1], }, // 22
-		{ pos: [-1, -1, -1], norm: [0, -1, 0], uv: [1, 1], }, // 23
-	];
-
-	// 上記の配列を3つの並列な配列に変換する
-	const positions = [];
-	const normals = [];
-	const uvs = [];
-	for (const vertex of vertices) {
-		positions.push(...vertex.pos);
-		normals.push(...vertex.norm);
-		uvs.push(...vertex.uv);
-	}
-
-	const geom = new three__WEBPACK_IMPORTED_MODULE_1__.BufferGeometry();
-	const positionNumComponents = 3;
-	const normalNumComponents = 3;
-	const uvNumComponents = 2;
-	geom.setAttribute('position', new three__WEBPACK_IMPORTED_MODULE_1__.BufferAttribute(new Float32Array(positions), positionNumComponents));
-	geom.setAttribute('normal', new three__WEBPACK_IMPORTED_MODULE_1__.BufferAttribute(new Float32Array(normals), normalNumComponents));
-	geom.setAttribute('uv', new three__WEBPACK_IMPORTED_MODULE_1__.BufferAttribute(new Float32Array(uvs), uvNumComponents));
-
-	// 頂点を共有している箇所があるので、setIndexで36個のvertexを指定する
-	geom.setIndex([
-		0, 1, 2, 2, 1, 3, // front
-		4, 5, 6, 6, 5, 7, // right
-		8, 9, 10, 10, 9, 11, // back
-		12, 13, 14, 14, 13, 15, // left
-		16, 17, 18, 18, 17, 19, // top
-		20, 21, 22, 22, 21, 23, // bottom
-	]);
-
-	const material = [
-		new three__WEBPACK_IMPORTED_MODULE_1__.MeshLambertMaterial({
-			opacity: 0.6, color: 0x44ff44, transparent: true
-		}),
-		new three__WEBPACK_IMPORTED_MODULE_1__.MeshBasicMaterial({
-			color: 0x000000, wireframe: true
-		})
-	];
-
-	// createMultiMaterialObjectを使って指定されたマテリアル用にそれぞれひとつずつメッシュを作成。
-	// それらのメッシュをグループにまとめる
-	let cube = new three_examples_jsm_utils_SceneUtils_js__WEBPACK_IMPORTED_MODULE_0__.createMultiMaterialObject(geom, material);
-	scene.add(cube);
-
-	cube.position.x = 0;
-	cube.position.z = 0;
-	cube.position.y = 1;
-
-	// グループなので、例えば影を落とす場合はforEachとかで子要素に対してcastShadowする
-	// cube.children.forEach(e => e.castShadow = true);
-
 	function render() {
 		stats.update();
-
+		// cube.rotation.x += 0.1;
 		requestAnimationFrame(render);
 		renderer.render(scene, camera);
 	}

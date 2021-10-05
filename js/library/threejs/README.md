@@ -22,3 +22,4 @@ https://dotinstall.com/lessons/basic_threejs_v2
 - [2.1.3 overrideMaterialの利用](./hajimete-three-js/practice/case8/index.html)
 - [番外1 BufferGeometryを使ったジオメトリの構築](./hajimete-three-js/practice/case9/index.html)
 - [番外2 番外1の方法をsetIndexでもう少しスマートに書く](./hajimete-three-js/practice/case10/index.html)
+- [番外3 createMultiMaterialObject](./hajimete-three-js/practice/case11/index.html)
