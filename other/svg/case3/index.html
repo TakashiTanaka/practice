@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SVGの練習</title>
+	<style>
+		.svg-img {
+			width: 100%;
+			max-width: 1000px;
+			margin: 0 auto;
+			height: auto;
+			display: block;
+		}
+
+		.text {
+			fill: #fff;
+			stroke: #000;
+			stroke-width: 2px;
+			stroke-dasharray: 10, 5;
+			animation: line-move 100s forwards infinite linear;
+			transition: all 1s;
+		}
+
+		.text:hover {
+			fill: #000;
+			stroke: none;
+		}
+
+		@keyframes line-move {
+			0% {
+				stroke-dashoffset: 0;
+			}
+
+			100% {
+				stroke-dashoffset: 1600;
+			}
+		}
+
+		.c-1 {
+			fill: #fff;
+			stroke: #000;
+			stroke-miterlimit: 10;
+			stroke-width: 15px;
+			transition: 1s;
+		}
+
+		.c-1:hover {
+			fill: #000;
+			stroke: #fff;
+			stroke-miterlimit: 10;
+			stroke-width: 15px;
+		}
+
+		.c-2 {
+			animation: bound 2s infinite;
+		}
+
+		.c-2:hover {
+			animation: unset;
+		}
+
+		@keyframes bound {
+			0% {
+				transform: translateY(0px);
+			}
+
+			10% {
+				transform: translateY(100px);
+			}
+
+			100% {
+				transform: translateY(0px);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<svg class="svg-img" xmlns="http://www.w3.org/2000/svg" width="918.9" height="695.8" viewBox="0 0 918.9 695.8">
+		<path class="text"
+			d="M48 129.5a85.4 85.4 0 0 1-19.6-2.3 53.4 53.4 0 0 1-16.5-6.7 9.1 9.1 0 0 1-4.2-5.6 9.3 9.3 0 0 1 .5-6.2 7.3 7.3 0 0 1 4-4.1c1.9-.7 4-.3 6.4 1.2a51.6 51.6 0 0 0 14 5.7 64.3 64.3 0 0 0 15.4 1.8c7.9 0 13.7-1.4 17.3-4A12.3 12.3 0 0 0 70.7 99a9.9 9.9 0 0 0-3.8-8.2c-2.6-2.1-7-3.7-13.2-5l-16.5-3.5C18.4 78.3 9 68.7 9 53.4a29.1 29.1 0 0 1 5.3-17.3 34 34 0 0 1 14.5-11.4 53.5 53.5 0 0 1 21.5-4.1 63.6 63.6 0 0 1 17.1 2.3A49.8 49.8 0 0 1 82 29.5a8.1 8.1 0 0 1 3.6 5.2 8.6 8.6 0 0 1-.8 5.7 7.4 7.4 0 0 1-4.3 3.6c-1.9.6-4.2.2-6.8-1.3a42.4 42.4 0 0 0-11.2-4.5 54.8 54.8 0 0 0-12.4-1.3c-6.9 0-12.3 1.4-16.2 4.3a13.5 13.5 0 0 0-5.8 11.4 11.2 11.2 0 0 0 3.6 8.7c2.4 2.1 6.5 3.8 12.3 5l16.4 3.4c9.9 2.1 17.2 5.4 22.1 9.9s7.3 10.5 7.3 18.1a27.9 27.9 0 0 1-5.1 16.6 33 33 0 0 1-14.5 11.2c-6.3 2.7-13.7 4-22.2 4Zm100.3-.3c-5.1 0-8.7-2.5-10.9-7.5l-39.2-88c-1.6-3.8-1.5-6.9.2-9.2a9 9 0 0 1 7.7-3.6 10.4 10.4 0 0 1 6.6 1.9 15.1 15.1 0 0 1 3.6 5.6l32.3 75 32.3-75.1a15.8 15.8 0 0 1 3.9-5.5 9.9 9.9 0 0 1 6.3-1.9 8.4 8.4 0 0 1 7.3 3.6c1.6 2.4 1.6 5.5-.1 9.2l-39.2 88a13 13 0 0 1-4.1 5.6 10.5 10.5 0 0 1-6.7 1.9Zm115.9.3c-11.7 0-21.6-2.2-29.6-6.6a43.9 43.9 0 0 1-18.4-18.8q-6.3-12.1-6.3-28.8c0-11.2 2.1-20.9 6.4-29.1a45.8 45.8 0 0 1 18.6-18.9c8.2-4.4 17.9-6.7 29.2-6.7a70.5 70.5 0 0 1 16.9 2.1 50.6 50.6 0 0 1 15.9 6.8 7.2 7.2 0 0 1 3.9 5.2 9.9 9.9 0 0 1-1 6.1 7.9 7.9 0 0 1-4.5 3.9q-3 1.2-6.6-.9a46 46 0 0 0-11.6-4.8 52.2 52.2 0 0 0-13-1.5c-11.2 0-19.7 3.2-25.5 9.7S230 63.1 230 75.3s2.9 21.7 8.9 28.1 14.6 9.6 26.2 9.6a60.3 60.3 0 0 0 10.2-.9 62.8 62.8 0 0 0 10.2-2.4V85H269q-7.8 0-7.8-7.2c0-4.7 2.6-7 7.8-7h24.8q7.8 0 7.8 7.8v36.5c0 4.6-1.8 7.5-5.4 8.8a90.3 90.3 0 0 1-15.2 4 88.4 88.4 0 0 1-16.8 1.6Z" />
+		<circle class="c-2" cx="681.8" cy="316.2" r="237.1" />
+		<a href="http://google.com">
+			<circle class="c-1" cx="323.8" cy="451.2" r="237.1" />
+		</a>
+	</svg>
+</body>
+
+</html>
