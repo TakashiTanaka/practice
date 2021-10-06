@@ -26,6 +26,7 @@
 |Shift + ⌘ + C|文字を中央揃え|Singari|
 |Control + F|アートボードのサイズをコンテンツにフィット|Resize Artboard to Fit Content|
 |⌘ + Shift + X|塗りと線の色の入れ替え|
+|Control + Shift + E|選択したアートボードをエクスポート|Zeplin for XD|
 
 ## その他便利な機能
 - コンポーネントを別のコンポーネントに置き換える

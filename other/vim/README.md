@@ -164,6 +164,9 @@ vimと打つと立ち上がる
 		
 
 ## 未解決な事
+- 「100px」みたいな数値の時に数値だけ選択して入力したい
+	[How can I 'change in number' or 'change in digits' in Vim \- Stack Overflow](https://stackoverflow.com/questions/30873668/how-can-i-change-in-number-or-change-in-digits-in-vim/30874254)
+
 ## 参考
 [vimrc基礎文法最速マスター \- 永遠に未完成](https://thinca.hatenablog.com/entry/20100205/1265307642)
 [初心者向け Vimでカーソルの移動速度を速くする方法 \- Qiita](https://qiita.com/iwaseasahi/items/fbcd1cc13efee92c6354)
