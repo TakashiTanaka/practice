@@ -4,6 +4,7 @@ Scalable Vector Graphics
 
 [case1 基本とサイズの確認など](./case1/index.html)
 [case2 ドットインストールで勉強](./case2/index.html)
+[case3 SVGOを使ってsvgを最適化 & ハイパーリンク & アニメーション](./case3/index.html)
 
 - Viewboxは描画領域をどのくらいの座標空間として捉えるか指定する項目
 
