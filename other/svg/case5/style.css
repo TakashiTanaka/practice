@@ -1,0 +1,28 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.canvas {
+	height: 100vh;
+	width: 100%;
+}
+
+.background {
+	fill:green;
+	height: 100%;
+	width: 100%;
+}
+
+.bakudan {
+	/* fill:black; */
+	/* left: 50%; */
+	/* position: absolute; */
+	/* top: 50%; */
+}
+
+.test {
+	background: rgb(255, 219, 219);
+	height: 100vh;
+	width: 100%;
+}
