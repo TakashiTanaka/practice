@@ -47,5 +47,11 @@ task()メソッドを使った書き方は非推奨となっているため、�
 
 1. `npm run watch`で実行
 
-## 参考
+### 参考
 [gulp\-sass\-glob\-use\-forward \- npm](https://www.npmjs.com/package/gulp-sass-glob-use-forward)
+
+## case3 gulpのdest\()でファイルをコピーする
+単純なコピーであればdestで済むこと事がわかった
+
+## case4 gulp-cleanのテスト
+gulp-cleanを使えば指定のフォルダ、ファイルを削除できることがわかった
