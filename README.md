@@ -110,6 +110,7 @@
       <li><a href="https://takashitanaka.github.io/practice/other/vagrant/">Vagrant入門</a></li>
       <li><a href="https://takashitanaka.github.io/practice/other/vim/">Vim入門</a></li>
       <li><a href="https://takashitanaka.github.io/practice/other/xd/">AdobeXD</a></li>
+      <li><a href="https://takashitanaka.github.io/practice/other/fontAwesome/">FontAwesomeのテスト</a></li>
     </ul>
   </body>
 </html>
