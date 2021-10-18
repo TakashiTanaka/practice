@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"lib": ["ES2015"],
+		"module": "commonjs",
+		"outDir": "dist", // 出力するコードを格納するディレクトリ
+		"sourceMap": true,
+		"strict": true,
+		"target":"ES2015"
+	},
+	// tscがtsファイルをどのディレクトリから探すべきか
+	"include": [
+		"src"
+	],
+}
