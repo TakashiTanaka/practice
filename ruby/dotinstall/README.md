@@ -1,4 +1,4 @@
-# rubyのチュートリアル
+# ドットインストールでRuby入門
 
 - rubyのバージョン管理はrbenv
 rbenv versions インストール済みのrubyのバージョンを確認

@@ -66,6 +66,10 @@
       <li><a href="https://takashitanaka.github.io/practice/js/library/browserSync/">browserSync</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/parallax.js/">parallax.js</a></li>
     </ul>
+    <h3>Ruby</h3>
+    <ul>
+      <li><a href="https://takashitanaka.github.io/practice/ruby/dotinstall/">Ruby入門（Dotinstall）</a></li>
+    </ul>
     <h3>タスクランナー</h3>
     <ul>
       <li><a href="https://takashitanaka.github.io/practice/js/task-runner/gulp/index.html">gulp入門</a></li>
