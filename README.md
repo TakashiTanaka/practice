@@ -66,10 +66,6 @@
       <li><a href="https://takashitanaka.github.io/practice/js/library/browserSync/">browserSync</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/library/parallax.js/">parallax.js</a></li>
     </ul>
-    <h3>Ruby</h3>
-    <ul>
-      <li><a href="https://takashitanaka.github.io/practice/ruby/dotinstall/">Ruby入門（Dotinstall）</a></li>
-    </ul>
     <h3>タスクランナー</h3>
     <ul>
       <li><a href="https://takashitanaka.github.io/practice/js/task-runner/gulp/index.html">gulp入門</a></li>
@@ -93,6 +89,10 @@
       <li><a href="https://takashitanaka.github.io/practice/js/frame-work/gatsbyTest/index.html">gatsby入門</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/frame-work/react/">react入門</a></li>
       <li><a href="https://takashitanaka.github.io/practice/js/frame-work/react-handson/">React Handson</a></li>
+    </ul>
+    <h2>Ruby</h2>
+    <ul>
+      <li><a href="https://takashitanaka.github.io/practice/ruby/dotinstall/">Ruby入門（Dotinstall）</a></li>
     </ul>
     <h2>PHP</h2>
     <ul>
