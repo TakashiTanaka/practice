@@ -11,8 +11,11 @@
 - [Case 3 fixedを使った方法](./case3.html)
 	逆にどんな状況でも常に最下部に表示してしまう
 
-- [Case 4 jQueryを使った方法](./case4.html)
+- [Case 4 jQueryを使った方法](./case4/index.html)
 	1. ブラウザの高さとブラウザの上辺からfooterの上辺までの距離 + footerの高さを比較する
 	1. もしブラウザの高さがブラウザの上辺からfooterの上辺までの距離 + footerの高さよりも高かったら処理を実行する
 	1. 処理の内容はfooterのpositionをfixedに、topをwindow.innerHeight - footerの高さに設定する
 	参考:[footerを下部に固定する方法！【jQueryやjsライブラリ使用】 \| ウェブカツ公式BLOG](https://webukatu.com/wordpress/blog/10854/#jQuery)
+
+- [Case 5 JavaScriptを使った方法](./case5/index.html)
+仕組み的にはjQueryと同じ

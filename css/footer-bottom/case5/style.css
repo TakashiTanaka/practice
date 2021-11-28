@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #bbb;
+}
+
+main {
+  background-color: darkgreen;
+  color: #fff;
+  display: none;
+  height: 2000px;
+  text-align: center;
+}
+
+main.is-main-show {
+  display: block;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: #333;
+  opacity: 0.8;
+  color: #fff;
+  padding: 3em 0;
+}
