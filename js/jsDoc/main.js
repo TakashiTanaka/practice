@@ -12,3 +12,10 @@ let myAge = 30;
 function returnMsg(msg) {
   return msg;
 }
+
+/**
+ * 引数で与えた文字列をそのまま返します
+ * @param {string} msg 返す文字列です。
+ * @return {string}
+ */
+const returnMsg2 = msg => msg;
