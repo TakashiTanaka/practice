@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>画像の縦横比をpaddingを使って指定するCSSハック</h1>
+    <section>
+      <div class="img-wrapper-1-1">
+        <img class="img" src="https://placehold.jp/800x600.png" />
+      </div>
+      <p>1/1の場合(padding-top: 100%;)</p>
+    </section>
+    <section>
+      <div class="img-wrapper-3-4">
+        <img class="img" src="https://placehold.jp/800x600.png" />
+      </div>
+      <p>3/4の場合(padding-top: 75%;)</p>
+    </section>
+    <section>
+      <div class="img-wrapper-2-3">
+        <img class="img" src="https://placehold.jp/800x600.png" />
+      </div>
+      <p>2/3の場合(padding-top: 66.67%;)</p>
+    </section>
+    <section>
+      <div class="img-wrapper-9-16">
+        <img class="img" src="https://placehold.jp/800x600.png" />
+      </div>
+      <p>9/16の場合(padding-top: 56.25%;)</p>
+    </section>
+  </body>
+</html>
