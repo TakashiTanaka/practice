@@ -1,10 +1,18 @@
 # React
+## 疑問点
 
-ドットインストールで紹介されていた、  
-Reactを実装しました。
+- コンポーネントの定義の仕方が色々ある
+	- 関数コンポーネントとクラスコンポーネントの2種類あり、どちらでも良いけど、関数で作る方が簡潔
+	```
+	// 関数コンポーネント
+	function Welcome(props) {
+  	return <h1>Hello, {props.name}</h1>;
+	}
 
-制作物URL  
-https://takashitanaka.github.io/practice/js-practice/omikuji/omikuji.html
-
-参考URL  
-https://dotinstall.com/lessons/omikuji_js_v5
+	// クラスコンポーネント
+	class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+		}
+	}
+	```
