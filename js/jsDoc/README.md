@@ -6,7 +6,7 @@
 
 ## メリット
 
-- エディタの機能でコードヒントやコード補完が表示される
+- エディターの機能でコードヒントやコード補完が表示される
 - 他のエンジニアや未来の自分がコードを読み取りやすくなる
 
 ## 書き方
@@ -32,7 +32,7 @@ function returnMsg(msg) {
 
 ## VSCodeでDocument Thisを使う
 
-VSCodeのDocument Thisという拡張機能を利用すると、
+VS CodeのDocument Thisという拡張機能を利用すると、
 JSDocのフォーマットを生成できるようになる。
 
 1. 拡張機能「Document This」をインストール
