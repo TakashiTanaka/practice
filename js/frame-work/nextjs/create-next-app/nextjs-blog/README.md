@@ -234,7 +234,157 @@ Server-Side Renderingはアクセス時にHTMLファイルが生成される
    }
    ```
 
+1. `pages/index.js`内で`getSortedPostsData`を読み込む
+`import { getSortedPostsData } from '../lib/posts';`
 
+1. `getStaticProps`を定義し、その中で`getSortedPostsData`を使用
+
+   ```JavaScript
+   export async function getStaticProps() {
+   const allPostsData = getSortedPostsData();
+   return {
+      props: {
+         allPostsData,
+      },
+   };
+   }
+   ```
+
+1. `Home`コンポーネントにallPostsDataを読み込んで使用する
+
+   ```JavaScript
+   export default function Home({ allPostsData }) {
+   return (
+      <Layout home>
+         <Head>
+         <title>{siteTitle}</title>
+         </Head>
+         <section className={utilStyles.headingMd}>
+         <p>[Your Self Introduction]</p>
+         <p>
+            (This is a sample website - you’ll be building a site like this on{' '}
+            <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+         </p>
+         </section>
+         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+         <h2 className={utilStyles.headingLg}>Blog</h2>
+         <ul className={utilStyles.list}>
+            {allPostsData.map(({ id, date, title }) => (
+               <li className={utilStyles.listItem} key={id}>
+               {title}
+               <br />
+               {id}
+               <br />
+               {date}
+               </li>
+            ))}
+         </ul>
+         </section>
+      </Layout>
+   );
+   }
+   ```
+
+## Dynamic Routes（動的なルーティング）
+
+外部データから生成したページにパスを付与することができる
+
+![picture 1](./images/README/1639029461446.png)  
+
+
+1. `pages/posts`内に`[id].js`を作成する。下記を記述
+
+   ```JavaScript
+   import Layout from '../../components/layout';
+
+   export default function Post() {
+   return <Layout>...</Layout>;
+   }
+   ```
+
+1. `lib/posts.js`に`getAllPostsIds`関数を記述する
+
+   ```JavaScript
+   export function getAllPostIds() {
+   const fileNames = fs.readdirSync(postsDirectory)
+
+   // Returns an array that looks like this:
+   // [
+   //   {
+   //     params: {
+   //       id: 'ssg-ssr'
+   //     }
+   //   },
+   //   {
+   //     params: {
+   //       id: 'pre-rendering'
+   //     }
+   //   }
+   // ]
+   return fileNames.map(fileName => {
+      return {
+         params: {
+         id: fileName.replace(/\.md$/, '')
+         }
+      }
+   })
+   }
+   ```
+
+1. `pages/posts/[id].js`内で`getStaticPath`を呼び出す。また、その中で`getAllPostIds`を使用する
+
+   ```JavaScript
+   import { getAllPostIds } from '../../lib/posts'
+
+   export async function getStaticPaths() {
+   const paths = getAllPostIds()
+   return {
+      paths,
+      fallback: false
+   }
+   }
+   ```
+
+1. `lib/posts.js`内に`getPostData`関数を追記する
+   これはidを受け取って、投稿データを返却する関数
+
+   ```JavaScript
+   export function getPostData(id) {
+   const fullPath = path.join(postsDirectory, `${id}.md`)
+   const fileContents = fs.readFileSync(fullPath, 'utf8')
+
+   // Use gray-matter to parse the post metadata section
+   const matterResult = matter(fileContents)
+
+   // Combine the data with the id
+   return {
+      id,
+      ...matterResult.data
+   }
+   }
+   ```
+
+1. `pages/posts/[id].js`に`getPostData`を読み込むために変更を加える
+
+   ```JavaScript
+   import { getAllPostIds, getPostData } from '../../lib/posts'
+
+   export async function getStaticProps({ params }) {
+   const postData = getPostData(params.id)
+   return {
+      props: {
+         postData
+      }
+   }
+   }
+   ```
+
+## Markdownファイルをレンダリングする
+
+1. remarkライブラリをインストールする
+`remark remark-html`
+
+1. `lib/posts.js`内にremarkとremark-htmlをimportする
 
 ## 公式ドキュメント
 
