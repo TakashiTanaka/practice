@@ -1,0 +1,3 @@
+# readdirSyncのテスト
+
+readdirSyncを使うことで特定のディレクトリ下のファイル名を取得できる
