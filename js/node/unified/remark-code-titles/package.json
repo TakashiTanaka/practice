@@ -1,0 +1,23 @@
+{
+  "name": "remark-code-titles",
+  "version": "1.0.0",
+  "description": "[mottox2/remark\\-code\\-titles](https://github.com/mottox2/remark-code-titles#readme)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "remark-code-titles": "^0.1.2",
+    "remark-html": "^15.0.1",
+    "to-vfile": "^7.2.2",
+    "unified": "^10.1.1"
+  },
+  "devDependencies": {
+    "gatsby-remark-code-titles": "^1.1.0",
+    "remark-parse": "^10.0.1"
+  }
+}

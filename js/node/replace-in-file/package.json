@@ -1,0 +1,15 @@
+{
+  "name": "replace-in-file",
+  "version": "1.0.0",
+  "description": "ファイル内の文字列を検索置換するライブラリ",
+  "main": "replace.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "replace-in-file": "^6.3.2"
+  }
+}
