@@ -155,6 +155,53 @@ Next.jsのアプリケーションの作成とローカルサーバーの立ち�
 1. `pages/_app.js`に`global.css`を読み込む
    `import '../styles/global.css';`
 
+## node_modules内のCSSを使用したい時（例えばbootstrapとかdestyleとか）
+
+グローバルのスタイルは`pages/_app.js`で指定するので、そこにインポートする
+
+```JavaScript
+// pages/_app.js
+import 'bootstrap/dist/css/bootstrap.css'
+
+export default function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+```
+
+## Sassを使いたい時
+
+`npm i sass`でsassをインストールすれば、`.module.scss` or `.module.sass`が使えるようになる
+
+### オプションの指定
+
+`next.config.js`内のsassOptionsでオプションを指定することができる
+
+```SCSS
+/* variables.module.scss */
+$primary-color: #64FF00
+
+:export {
+  primaryColor: $primary-color
+}
+```
+
+```SCSS
+// pages/_app.js
+import variables from '../styles/variables.module.scss'
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <Layout color={variables.primaryColor}>
+      <Component {...pageProps} />
+    </Layout>
+  )
+}
+```
+
+### Sassの変数をexportする
+
+Sassで変数を定義し、それをexportすることで他のコンポーネントでも使用することができる
+
 ## Pre-rendering（事前レンダリング）について
 
 Next.jsは全てのページを事前にレンダリングする。
@@ -385,6 +432,190 @@ Server-Side Renderingはアクセス時にHTMLファイルが生成される
 `remark remark-html`
 
 1. `lib/posts.js`内にremarkとremark-htmlをimportする
+
+1. `getPostData`を編集する
+
+   ```JavaScript
+   export async function getPostData(id) {
+   const fullPath = path.join(postsDirectory, `${id}.md`)
+   const fileContents = fs.readFileSync(fullPath, 'utf8')
+
+   // Use gray-matter to parse the post metadata section
+   const matterResult = matter(fileContents)
+
+   // Use remark to convert markdown into HTML string
+   const processedContent = await remark()
+      .use(html)
+      .process(matterResult.content)
+   const contentHtml = processedContent.toString()
+
+   // Combine the data with the id and contentHtml
+   return {
+      id,
+      contentHtml,
+      ...matterResult.data
+   }
+   }
+   ```
+
+1. `pages/posts/[id].js`内の`getStaticProps`を編集
+
+   ```JavaScript
+   export async function getStaticProps({ params }) {
+   // Add the "await" keyword like this:
+   const postData = await getPostData(params.id)
+   // ...
+   }
+   ```
+
+1. `pages/posts/[id].js`内のPostコンポーネントを編集
+
+   ```JavaScript
+   export default function Post({ postData }) {
+   return (
+      <Layout>
+         {postData.title}
+         <br />
+         {postData.id}
+         <br />
+         {postData.date}
+         <br />
+         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </Layout>
+   )
+   }
+   ```
+
+## Postページを改善する
+
+### titleを設定
+
+1. Headコンポーネントをimportして、組み込む
+
+   ```JavaScript
+   // Add this import
+   import Head from 'next/head'
+
+   export default function Post({ postData }) {
+   return (
+      <Layout>
+         {/* Add this <Head> tag */}
+         <Head>
+         <title>{postData.title}</title>
+         </Head>
+
+         {/* Keep the existing code here */}
+      </Layout>
+   )
+   }
+   ```
+
+### 日付をフォーマットする
+
+1. `date-fns`をインストールする
+`npm install date-fns`
+
+1. `components`ディレクトリ下に`date.js`を追加するその中で`date-fns`を読み込み、Dataコンポーネントを作成する
+
+   ```JavaScript
+   import { parseISO, format } from 'date-fns'
+
+   export default function Date({ dateString }) {
+   const date = parseISO(dateString)
+   return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
+   }
+   ```
+
+1. `pages/posts/[id].js`にDateコンポーネントを組み込む
+
+   ```JavaScript
+   // Add this import
+   import Date from '../../components/date'
+
+   export default function Post({ postData }) {
+   return (
+      <Layout>
+         {/* Keep the existing code here */}
+
+         {/* Replace {postData.date} with this */}
+         <Date dateString={postData.date} />
+
+         {/* Keep the existing code here */}
+      </Layout>
+   )
+   }
+   ```
+
+1. `pages/posts/[id].js`に`utils.module.css`を読み込むそして、各項目をスタイリングする
+
+   ```JavaScript
+   // Add this import at the top of the file
+   import utilStyles from '../../styles/utils.module.css'
+
+   export default function Post({ postData }) {
+   return (
+      <Layout>
+         <Head>
+         <title>{postData.title}</title>
+         </Head>
+         <article>
+         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+         <div className={utilStyles.lightText}>
+            <Date dateString={postData.date} />
+         </div>
+         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+         </article>
+      </Layout>
+   )
+   }
+   ```
+
+## Indexページを改善する
+
+### 各ページへのリンクを作成する
+
+1. `pages/index.js`内でLinkとDateコンポーネントを読み込む
+
+   ```JavaScript
+   import Link from 'next/link'
+   import Date from '../components/date'
+   ```
+
+1. `<li>`タグ周辺を改修する
+
+   ```JavaScript
+   <li className={utilStyles.listItem} key={id}>
+   <Link href={`/posts/${id}`}>
+      <a>{title}</a>
+   </Link>
+   <br />
+   <small className={utilStyles.lightText}>
+      <Date dateString={date} />
+   </small>
+   </li>
+   ```
+
+## Vercelにデプロイする
+
+1. GitHubアカウントを作っておく
+
+1. `nextjs-blog`リポジトリを作成する
+   privateでもpublicでもok
+   また、README.mdは作らない
+
+1. リモートリポジトリにpushする
+
+```bash
+git remote add origin https://github.com/<username>/nextjs-blog.git
+git push -u origin main
+```
+
+1. vercelアカウントをgithubアカウントで作成する
+
+1. `nextjs-blog`リポジトリをimportする
+
+1. 色々設定できるが、とりあえずデフォルトでDeployする
+   するとDeployの項目が動き出すので少し待つ
 
 ## 公式ドキュメント
 
