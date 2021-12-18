@@ -1,0 +1,9 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* 背景色を黄色に指定 */
+#target {
+  background: yellow;
+}
