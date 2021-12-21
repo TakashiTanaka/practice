@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrollYのテスト</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <svg id="ruler" xmlns="http://www.w3.org/2000/svg"></svg>
+    <div id="val">
+      <p>コンテンツエリアの高さ：<span id="content-height-val"></span>px</p>
+      <p>ScrollY：<span id="scroll-y-val">0</span>px</p>
+      <p>viewportの高さ：<span id="window-height-val"></span>px</p>
+    </div>
+    <main id="contents"></main>
+    <script src="./lib/rulez.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
