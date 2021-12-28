@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+main {
+  padding: 2rem;
+}
+
+details {
+  margin-bottom: 2rem;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 0.5em;
+}
+
+summary {
+  cursor: pointer;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.anim[open] p {
+  animation: accordion ease 1s;
+}
+
+@keyframes accordion {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: fit-content;
+  }
+}
