@@ -32,7 +32,7 @@ EditorConfig for VS Code, Laravel Blade Snippets
 
 - 仕組みの確認
 
-  - routes/web.php でルーティングを設定している
+  - routes/web.phpでルーティングを設定している
 
   - viewファイルはresources/viewsの中に入っている
 
