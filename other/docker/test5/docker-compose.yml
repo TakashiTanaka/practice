@@ -1,0 +1,65 @@
+version: '3'
+services:
+  # SSL対応
+  https-portal:
+    image: steveltn/https-portal:1
+    container_name: web_https-portal
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - nginx
+    restart: always
+    volumes:
+      - ./certs:/var/lib/https-portal
+    environment:
+      # 本番運用するときはコメントアウトを外してください
+      #      STAGE: 'production'
+      STAGE: local
+      DOMAINS: >-
+        test.local -> http://nginx
+      WORKER_PROCESSES: auto
+      WORKER_CONNECTIONS: 2048
+      CLIENT_MAX_BODY_SIZE: '128M'
+
+  # Nginx
+  nginx:
+    image: nginx:stable
+    container_name: web_nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/log:/var/log/nginx
+      - ./nginx/www:/var/www
+    depends_on:
+      - wordpress
+    restart: always
+
+  # WordPress+PHP7.4
+  wordpress:
+    image: wordpress:php7.4-apache
+    container_name: web_wordpress
+    environment:
+      - WORDPRESS_DB_HOST=mysql
+      - WORDPRESS_DB_USER=user
+      - WORDPRESS_DB_PASSWORD=pass
+      - WORDPRESS_DB_NAME=wordpress
+    volumes:
+      - ./wordpress:/var/www/html
+      - ./wordpress-php/conf.d/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    depends_on:
+      - mysql
+    restart: always
+
+  # MySQL
+  mysql:
+    image: mysql:5.7
+    container_name: web_mysql
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass
+      - MYSQL_DATABASE=wordpress
+    restart: always

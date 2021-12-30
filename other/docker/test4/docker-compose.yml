@@ -1,0 +1,22 @@
+version: '3'
+services:
+  https-portal:
+    image: steveltn/https-portal:1
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+    environment:
+      DOMAINS: 'test.local -> http://web:8008'
+      STAGE: local
+    volumes:
+      - ./org-chimata-ssl-certs:/var/lib/https-portal
+  web:
+    image: nginx:1.19-alpine
+    ports:
+      - 8008:8008
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./www:/var/www/html
+    depends_on:
+      - https-portal

@@ -1,0 +1,1 @@
+[仕組みと使い方がわかる Docker＆Kubernetesのきほんのきほん \(Compass Booksシリーズ\) \| 小笠原 種高 \| コンピュータ・IT \| Kindleストア \| Amazon](https://www.amazon.co.jp/dp/B08T961HKP/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)を参考にしながらdocker-composeファイルを作成
