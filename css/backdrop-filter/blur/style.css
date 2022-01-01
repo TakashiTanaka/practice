@@ -1,0 +1,12 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.rect {
+  width: 50%;
+  height: 20%;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
