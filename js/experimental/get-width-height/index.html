@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>要素の大きさを取得する方法</h1>
+    <div class="box"></div>
+    <h2>boxの情報</h2>
+    <p>width: 199.5px;<br />height: 400px;<br />border: 50px solid #000;</p>
+    <hr />
+    <h2>取得した情報</h2>
+    <p>
+      clientWidth: <span id="cw"></span>px<br />
+      clientHeight: <span id="ch"></span>px<br />
+      offsetWidth: <span id="ow"></span>px<br />
+      offsetHeight: <span id="oh"></span>px<br />
+      getBoundingClientRect().width: <span id="bcrw"></span>px<br />
+      getBoundingClientRect().height: <span id="bcrh"></span>px<br />
+    </p>
+    <script src="main.js"></script>
+  </body>
+</html>

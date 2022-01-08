@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  background-color: red;
+  border: 50px solid #000;
+  height: 400px;
+  width: 199.5px;
+}
