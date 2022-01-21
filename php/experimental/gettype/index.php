@@ -1,0 +1,2 @@
+<?php 
+gettype("test");
