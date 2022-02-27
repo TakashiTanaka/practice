@@ -1,11 +1,16 @@
-.test {
-	background-color: red;
-	width: 500px;
-	height: 200px;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.test__inner {
-	background-color: cornflowerblue;
-	width: 50%;
-	height: 50%;
+.red-box {
+  background-color: red;
+  height: 100vh;
+  width: 100vw;
+}
+
+.blue-box {
+  background-color: cornflowerblue;
+  height: 50%;
+  width: 50%;
 }
