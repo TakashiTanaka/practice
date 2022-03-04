@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  padding: 4em;
+}
+
+p {
+  margin-left: 1em;
+  text-indent: -1em;
+}
