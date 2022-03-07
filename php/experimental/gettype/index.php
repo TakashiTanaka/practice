@@ -1,2 +1,2 @@
-<?php 
-gettype("test");
+<?php
+echo gettype("test");
