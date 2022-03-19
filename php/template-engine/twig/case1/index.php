@@ -3,6 +3,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 // twigのテンプレートの場所を指定するTwig_Loader_Filesystem
+// データを流し込みたいhtmlやphpのディレクトリの場所を指定する
 $loader = new \Twig\Loader\FilesystemLoader('./view');
 
 // Twigオブジェクトのインスタンスを作成する
@@ -15,4 +16,4 @@ $SITE_DATA = [
 ];
 
 // テンプレートにデータを送る
-echo $twig->render('index.php', $SITE_DATA);
+echo $twig->render('index.html', $SITE_DATA);
