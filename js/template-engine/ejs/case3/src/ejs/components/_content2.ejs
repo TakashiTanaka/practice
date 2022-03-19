@@ -1,0 +1,8 @@
+<%# data.item1は親から渡ってくる %>
+<p><%= data.item1 %></p>
+
+<%# data.item2のようにプロパティを参照している場合はエラーはでない %>
+<p><%= data.item2 %></p>
+
+<%# data.item2がundefinedだった場合はデフォルト値を設定したい場合はtypeofを使う %>
+<p><%= typeof data.item2 === "undefined" ? "デフォルト値" : data.item2 %></p>

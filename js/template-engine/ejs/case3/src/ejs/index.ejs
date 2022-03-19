@@ -2,7 +2,12 @@
 <html lang="ja">
   <%- include('components/_head') %> <%- include('components/_header') %>
   <body>
-    <%- include('components/_content', {data1: 'data', data2: 'data2'}) %>
+    <p>case 1 typeofで演算子で判定</p>
+    <div><%- include('components/_content', {item1: '項目1'}) %></div>
+    <p>case 2 データを1つのオブジェクトにまとめ、そのプロパティを参照（data.item2を未定義）</p>
+    <div><%- include('components/_content2', {data: {item1:'項目1'}}) %></div>
+    <p>case 3 データを1つのオブジェクトにまとめ、そのプロパティを参照（data.item2を定義）</p>
+    <div><%- include('components/_content2', {data: {item1:'項目1', item2: '項目2'}}) %></div>
   </body>
   <%- include('components/_footer') %>
 </html>
