@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.container {
+  background-color: gray;
+  height: 100px;
+  padding: 5%;
+  position: relative;
+}
+
+/* 
+ * boxを内包するrelativeを設定したinnerを作ることで、
+ * 内包するboxを絶対位置で、親のpadding内で収められる
+ * これの欠点としてはスタイルのためにhtmlに無駄なタグを増やしてしまうこと
+ */
+.container__inner {
+  position: relative;
+}
+
+.box {
+  background-color: pink;
+  height: 100px;
+  position: absolute;
+  width: 100%;
+}
