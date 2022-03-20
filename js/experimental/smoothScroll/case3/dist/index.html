@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>smoothScroll-3</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      header {
+        height: 200px;
+        background: peru;
+        position: sticky;
+        top: 0;
+      }
+      div {
+        background: rgb(176, 176, 176);
+        height: 2000px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>window.scrollでスクロール</h1>
+      <p>ポリフィルが必要</p>
+      <p>細かい制御をしたい場合はこれを使うと良い</p>
+      <a href="#A" class="js-smooth-scroll">Aまで移動します</a>
+      <a href="#B" class="js-smooth-scroll">Bまで移動します</a>
+      <a href="#C" class="js-smooth-scroll">Cまで移動します</a>
+    </header>
+    <div id="A">A</div>
+    <div id="B">B</div>
+    <div id="C">C</div>
+    <script src="main.js"></script>
+  </body>
+</html>

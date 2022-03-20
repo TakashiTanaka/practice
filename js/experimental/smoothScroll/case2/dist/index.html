@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>smoothScroll-2</title>
+    <style>
+      div {
+        background: rgb(176, 176, 176);
+        /* border: 1px solid #000; */
+        height: 2000px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>scrollIntoViewでスクロール</h1>
+    <p>これはSafari対応していない20210828時点</p>
+    <p>ポリフィルが必要</p>
+    <a href="#A" class="js-smooth-scroll">Aまで移動します</a>
+    <a href="#B" class="js-smooth-scroll">Bまで移動します</a>
+    <a href="#C" class="js-smooth-scroll">Cまで移動します</a>
+    <div id="A">A</div>
+    <div id="B">B</div>
+    <div id="C">C</div>
+    <script src="main.js"></script>
+  </body>
+</html>
