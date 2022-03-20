@@ -4,6 +4,8 @@
 - [Case2 scrollIntoViewでスクロール](./case2/dist/)
 - [Case3 window.scrollでスクロール](./case3/dist/)
 - [Case4 JSライブラリ、Smooth Scrollでスクロール](./case4/dist/)
+- [Case5 JSライブラリ、Smooth Scrollでスクロール（headerがstickyの時）](./case5/dist/)
+- [Case6 JSライブラリ、Smooth Scrollでスクロール（headerがstickyの時2）](./case6/dist/)
 
 ## 参考
 

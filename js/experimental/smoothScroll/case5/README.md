@@ -1,0 +1,7 @@
+# Case5 JSライブラリ、Smooth Scrollでスクロール（headerがstickyの時）
+
+固定ヘッダーにStickyだとなぜかスクロールがトグルの挙動になってしまう。
+
+この共同を回避するため、stickyにしたheaderタグ内にinner（divタグ）を設け、その要素をheaderとしてsmooth scroll側で計算させる
+
+ただこの方法だとheaderに余計なinnerが増えてしまう、またheaderを編集できない場合、この方法は適用できない

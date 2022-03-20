@@ -26,7 +26,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! smooth
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var smooth_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! smooth-scroll */ \"./node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js\");\n/* harmony import */ var smooth_scroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(smooth_scroll__WEBPACK_IMPORTED_MODULE_0__);\n// SmoothScrollを読み込み\n\n/** @type {SmoothScroll} - SmoothScrollオブジェクトのインスタンス */\n\nvar scroll = new (smooth_scroll__WEBPACK_IMPORTED_MODULE_0___default())('a[href*=\"#\"]', {\n  speed: 600,\n  // 移動スピード\n  easing: 'easeInOutQuint',\n  // イージングを指定\n  updateURL: false\n});\n\n//# sourceURL=webpack://my-webpack-project/./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var smooth_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! smooth-scroll */ \"./node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js\");\n/* harmony import */ var smooth_scroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(smooth_scroll__WEBPACK_IMPORTED_MODULE_0__);\n// SmoothScrollを読み込み\n\n/** @type {SmoothScroll} - SmoothScrollオブジェクトのインスタンス */\n\nvar scroll = new (smooth_scroll__WEBPACK_IMPORTED_MODULE_0___default())('a[href*=\"#\"]', {\n  speed: 600,\n  // 移動スピード\n  header: '#header',\n  easing: 'easeInOutQuint',\n  // イージングを指定\n  updateURL: false\n});\n\n//# sourceURL=webpack://my-webpack-project/./src/main.js?");
 
 /***/ })
 
