@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>smoothScroll-6</title>
+    <style>
+      body,
+      h1 {
+        padding: 0;
+        margin: 0;
+      }
+      header {
+        height: 200px;
+        background: peru;
+        position: sticky;
+        top: 0;
+      }
+      section {
+        background: rgb(176, 176, 176);
+        height: 2000px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <header id="header">
+      <h1>JSライブラリ、GSAPでスクロール</h1>
+      <a href="#A" data-scroll>Aまで移動します</a>
+      <a href="#B" data-scroll>Bまで移動します</a>
+      <a href="#C" data-scroll>Cまで移動します</a>
+    </header>
+    <section id="A">A</section>
+    <section id="B">B</section>
+    <section id="C">C</section>
+  </body>
+</html>
