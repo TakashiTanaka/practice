@@ -533,21 +533,95 @@ Ensure the default browser behavior of the `hidden` attribute.
           animation: 1s both bounce;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
+@-webkit-keyframes flash {
+  25%, 75% {
     opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
   }
 }
 
-@keyframes fadeIn {
-  from {
+@keyframes flash {
+  25%, 75% {
     opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
   }
 }
 
-.animate-fadeIn {
-  -webkit-animation: 1s both fadeIn;
-          animation: 1s both fadeIn;
+.animate-flash {
+  -webkit-animation: 1s both flash;
+          animation: 1s both flash;
+}
+
+@-webkit-keyframes pulse {
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
+
+.animate-pulse {
+  -webkit-animation: 1s ease-in-out both pulse;
+          animation: 1s ease-in-out both pulse;
+}
+
+@-webkit-keyframes rubberBand {
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+}
+
+@keyframes rubberBand {
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+}
+
+.animate-rubberBand {
+  -webkit-animation: 1s both rubberBand;
+          animation: 1s both rubberBand;
 }
 
 @-webkit-keyframes flipInX {
@@ -628,8 +702,38 @@ Ensure the default browser behavior of the `hidden` attribute.
           animation: 1s both slideInUp;
 }
 
+@-webkit-keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.animate-wiggle {
+  -webkit-animation: wiggle 1s ease-in-out infinite;
+          animation: wiggle 1s ease-in-out infinite;
+}
+
 .p-16 {
   padding: 4rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-3xl {
@@ -670,11 +774,6 @@ Ensure the default browser behavior of the `hidden` attribute.
           animation-duration: 0.5s;
 }
 
-.animate-slow {
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
 .animate-slower {
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
@@ -683,4 +782,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .animate-infinite {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+.animate-distance-2 {
+  --animate-distance: 0.5rem;
 }
