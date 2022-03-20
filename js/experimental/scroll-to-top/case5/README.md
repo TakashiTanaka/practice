@@ -1,4 +1,4 @@
-# Case7 JSライブラリ、GSAPでスクロール
+# Case5 case5 GSAPを使用
 
 gsapのScrollToPluginで実装。
 
