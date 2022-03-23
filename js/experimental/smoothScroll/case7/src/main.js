@@ -14,7 +14,7 @@ document.querySelectorAll('a[href*="#"]').forEach(a => {
     // デフォルトの処理を無効化
     e.preventDefault();
     /** @type {number} - スクロール先のハッシュ */
-    const hash = e.target.hash;
+    const hash = e.currentTarget.hash;
     /** @type {number} - ヘッダーの高さ */
     const headerHeight = document.querySelector('#header').getBoundingClientRect().height;
     // スクロール処理

@@ -7,7 +7,7 @@ smoothscroll.polyfill();
 // クリックイベントを設定
 document.addEventListener('click', e => {
   /** @type {EventTarget} - クリックされた要素 */
-  const target = e.target;
+  const target = e.currentTarget;
 
   // clickした要素がclass属性、js-smooth-scrollを含まない場合は処理を中断
   if (!target.classList.contains('js-smooth-scroll')) return;

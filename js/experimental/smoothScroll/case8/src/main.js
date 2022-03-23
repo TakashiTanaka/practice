@@ -9,7 +9,7 @@ $('a[href*="#"]').click(e => {
   // デフォルトの処理を無効化
   e.preventDefault();
   /** @type {string} - スクロール先のハッシュ */
-  const hash = e.target.hash;
+  const hash = e.currentTarget.hash;
   /** @type {JQuery<HTMLElement>} - スクロール先の要素 */
   const targetEl = $(hash);
   /** @type {number} - スクロール先の要素のY値 */
