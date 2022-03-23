@@ -1,0 +1,21 @@
+{
+  "name": "gulp-postcss-cssnano",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "cssnano": "^5.1.4",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1"
+  },
+  "browserslist": [
+    "IE 11"
+  ]
+}
