@@ -1,0 +1,13 @@
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* 幅の最大値を500pxに設定した例 */
+/* 親要素の幅50%が500px以下の時、要素幅は親要素の50%の値となる */
+.red-box {
+  background: red;
+  height: 100px;
+  width: min(50%, 500px);
+}
