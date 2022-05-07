@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="value">
+      <p class="screen-width">画面幅: <span></span>px</p>
+      <p class="view-width">1vw = <span></span>px</p>
+    </div>
+
+    <section>
+      <p>cssでの指定width: clamp(300px, 50%, 800px);</p>
+      <p class="red-box__value">赤いボックスのwidth: <span></span>px</p>
+      <div class="red-box"></div>
+    </section>
+
+    <section>
+      <p>cssでの指定font-size: clamp(16px, 6vw, 60px);</p>
+      <p class="blue-text__value">青い文字のfont-size: <span></span>px</p>
+      <div class="blue-text">blue</div>
+    </section>
+
+    <section>
+      <p>cssでの指定font-size: clamp(10px, 100 / 375 * 1vw * 16, 60px);</p>
+      <p>
+        375px幅の時に16px、最小値は10px、最大値60pxにしてレスポンシブに文字サイズを変えたいケース。
+      </p>
+      <p class="green-text__value">緑の文字のfont-size: <span></span>px</p>
+      <div class="green-text">green</div>
+    </section>
+  </body>
+</html>

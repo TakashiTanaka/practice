@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin-bottom: 10vh;
+}
+
+.value {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.red-box {
+  background-color: red;
+  height: 100px;
+  width: clamp(300px, 50%, 800px);
+}
+
+.blue-text {
+  color: blue;
+  font-size: clamp(16px, 6vw, 60px);
+}
+
+.green-text {
+  color: green;
+  font-size: clamp(10px, 100 / 375 * 1vw * 16, 60px);
+}
