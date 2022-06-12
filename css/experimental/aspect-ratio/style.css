@@ -1,0 +1,40 @@
+main {
+  max-width: 600px;
+}
+
+p {
+  margin: 0;
+}
+
+section > img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.ar {
+  border: solid 2px #000;
+  margin-bottom: 10%;
+}
+
+.ar > img {
+  height: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.ar-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+.ar-2-1 {
+  aspect-ratio: 2 / 1;
+}
+
+.ar-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.ar-16-9 {
+  aspect-ratio: 16 / 9;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=a, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>aspect-ratioのテスト</h1>
+      <section>
+        <h2>アスペクト比をdivに指定</h2>
+        <div class="ar ar-1-1">
+          <p>1 / 1のアスペクト比</p>
+        </div>
+        <div class="ar ar-2-1">
+          <p>2 / 1のアスペクト比</p>
+        </div>
+        <div class="ar ar-4-3">
+          <p>4 / 3のアスペクト比</p>
+        </div>
+        <div class="ar ar-16-9">
+          <p>16 / 9のアスペクト比</p>
+        </div>
+      </section>
+      <section>
+        <h2>アスペクト比をdivに指定し、object-fitをcoverに指定したimgタグを入れる</h2>
+        <div class="ar ar-1-1">
+          <img src="bird.jpg" alt="鳥" />
+        </div>
+        <div class="ar ar-2-1">
+          <img src="bird.jpg" alt="鳥" />
+        </div>
+        <div class="ar ar-4-3">
+          <img src="bird.jpg" alt="鳥" />
+        </div>
+        <div class="ar ar-16-9">
+          <img src="bird.jpg" alt="鳥" />
+        </div>
+      </section>
+      <section>
+        <h2>imgタグに対して直接aspect-ratioを指定する</h2>
+        <img class="ar ar-1-1" src="bird.jpg" alt="鳥" />
+        <img class="ar ar-2-1" src="bird.jpg" alt="鳥" />
+        <img class="ar ar-4-3" src="bird.jpg" alt="鳥" />
+        <img class="ar ar-16-9" src="bird.jpg" alt="鳥" />
+      </section>
+    </main>
+  </body>
+</html>
