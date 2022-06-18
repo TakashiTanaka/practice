@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  background: red;
+  height: 100px;
+  width: 100px;
+}
+
+.box--blue {
+  background: blue;
+}
