@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>marginとpaddingの%指定挙動の確認</h1>
+    <hr />
+    <p>
+      ％指定のmargin, paddingは親要素の幅が基準となる<br />
+      赤いボックスにmargin-bottom: 10%;<br />
+      青いボックスにpadding-bottom: 10%;のスタイルをあてている
+    </p>
+    <p>幅800pxのコンテナ内の要素にmargin, paddingを設定した場合、800pxが基準となる</p>
+    <div class="container">
+      <div class="box box--red">margin-bottom: 10%;を設定</div>
+      <div class="box box--blue">padding-bottom: 10%;を設定</div>
+    </div>
+    <hr />
+    <p>親要素がwindowのサイズになるので画面幅を変えるとmarginもかわる</p>
+    <div class="box box--red">margin-bottom: 10%;を設定</div>
+    <div class="box box--blue">padding-bottom: 10%;を設定</div>
+  </body>
+</html>

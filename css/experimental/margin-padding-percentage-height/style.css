@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 800px;
+}
+
+.box {
+  border: 6px solid #000;
+  color: white;
+  height: 100px;
+  width: 100%;
+}
+
+.box--red {
+  background-color: red;
+  margin-bottom: 10%;
+}
+
+.box--blue {
+  background-color: blue;
+  padding-bottom: 10%;
+}
