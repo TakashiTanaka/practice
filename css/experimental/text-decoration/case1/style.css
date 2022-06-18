@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.underline-dotted {
+  text-decoration: underline dotted;
+}
+
+.underline-dotted-red {
+  text-decoration: underline dotted red;
+}
+
+.underline-wavy-green {
+  text-decoration: underline wavy green;
+}
