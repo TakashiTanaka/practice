@@ -11,23 +11,23 @@ const drawRectOriginCenter = _rect(1000 / 2)(1000 / 2);
 const draw100pxRect = x => y => _rect(x)(y)(100);
 
 function setup() {
-	createCanvas(1000, 1000);
-	background(0);
-	fill(255);
+  createCanvas(1000, 1000);
+  background(0);
+  fill(255);
 
-	// 普通のrectで描写
-	text('普通のrectで描写', 100, 230);
-	rect(100, 100, 100);
+  // 普通のrectで描写
+  text('普通のrectで描写', 100, 230);
+  rect(#ffffff);
 
-	// カリー化したrectで描写
-	text('カリー化したrectで描写', 300, 230);
-	_rect(300)(100)(100);
+  // カリー化したrectで描写
+  text('カリー化したrectで描写', 300, 230);
+  _rect(300)(100)(100);
 
-	// 原点がcanvasの中央（x=500,y=500）に部分適用した関数で描写
-	text('原点がcanvasの中央（x=500,y=500）に部分適用した関数で描写', 1000 / 2, 1000 / 2 + 130);
-	drawRectOriginCenter(100);
+  // 原点がcanvasの中央（x=500,y=500）に部分適用した関数で描写
+  text('原点がcanvasの中央（x=500,y=500）に部分適用した関数で描写', 1000 / 2, 1000 / 2 + 130);
+  drawRectOriginCenter(100);
 
-	// サイズが100pxのrectをx=500,y=100の位置に描写
-	text('サイズが100pxのrectをx=500,y=100の位置に描写', 500, 230);
-	draw100pxRect(500)(100);
+  // サイズが100pxのrectをx=500,y=100の位置に描写
+  text('サイズが100pxのrectをx=500,y=100の位置に描写', 500, 230);
+  draw100pxRect(500)(100);
 }
