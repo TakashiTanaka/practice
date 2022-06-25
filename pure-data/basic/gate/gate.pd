@@ -1,0 +1,13 @@
+#N canvas 404 321 1230 878 12;
+#X obj 794 292 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 794 312 metro 1000;
+#X msg 794 336 1;
+#X obj 794 360 +;
+#X floatatom 831 360 5 0 0 0 - - -;
+#X obj 777 404 gate 3;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 3 1;

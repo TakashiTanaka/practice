@@ -1,0 +1,8 @@
+#N canvas 1001 295 848 867 12;
+#X obj 384 372 metro 1000;
+#X obj 384 423 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 384 325 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;

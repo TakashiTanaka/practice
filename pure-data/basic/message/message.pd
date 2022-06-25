@@ -1,0 +1,6 @@
+#N canvas 1495 347 815 536 12;
+#X obj 377 233 print;
+#X msg 378 169 Goodbye;
+#X obj 377 201 prepend Hello;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
