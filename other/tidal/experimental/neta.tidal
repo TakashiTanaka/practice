@@ -1,0 +1,112 @@
+setcps(130/60/4)
+
+d1
+  $ every 4 (rev)
+  $ every 4 (fast 2)
+  $ every 12 (slow 2)
+  $ every 12 (fast 4)
+  $ every 24 (fast 8)
+  $ every 36 (fast 12)
+  $ cat [
+    n "<~ [d5, df5, c6]>",
+    n "~ [f4, cf5, cs7]",
+    n "<[c2, cf4, es7] ~>",
+    n "[g3, cs5, es9]"
+  ]
+  # s "superpiano"
+  # velocity (rand)
+  # sustain "2"
+  # room "2"
+  # size "0.9"
+  # dry "0.3"
+
+d2
+  $ every 4 (fast 2)
+  $ every 8 (slow 8)
+  $ cat [
+    n "c5 [c2 c2*3 ~]",
+    n "c2 c2*5 [c2 ~]",
+    n "c3 [c3 c3*2 ~ c3*3] [c3*3]"
+  ]
+  # s "super808"
+  # distort "0.2"
+  # gain "1.3"
+
+d3
+  $ cat [
+    n "c7*16 c7*6",
+    n "c7*16"
+  ]
+  # s "superhat"
+  # gain (rand)
+  # delay "0.5"
+  # delayt "0.5"
+  # delayfb "0.4"
+  # pan (sine)
+
+d4
+  $ cat [
+    n "d2"
+  ]
+  # s "supersaw"
+  # sustain "10"
+  # shape "0.15"
+  # gain "0.9"
+  # attack "2"
+
+d4
+  $ every 8 (rev)
+  $ n "c1 c2"
+  # s "supersquare"
+  # sustain "2"
+
+d4 silence
+
+d2
+  $ n "[c1, e4, f5, e3]"
+  # s "superpiano"
+  # crush "8"
+  # distort "20"
+  # gain "0.2"
+  # sustain "7"
+
+d2
+  $ every 4 (slow 2)
+  $ n "[cs4 c6 cf2 c7]*4"
+  # s "superpiano"
+  # distort "2"
+  # room "1"
+  # gain (rand)
+  # pan (rand)
+
+d2 silence
+
+d1
+  $ s "<supersquare*8 supersquare*16 supersquare*5 supersquare*4>"
+  # n (irand 16)
+  # distort "16"
+  # pan (rand)
+  # attack "5"
+
+d2
+  $ n "[c3*2 [d5 e5 f5]] [g5 b e5]"
+  # s "supergrind"
+  # gain "1"
+
+
+
+d6
+  $ n "0 1 2 3"
+  # s "alphabet"
+  # gain "1"
+  # pan (sine)
+
+d1 silence
+
+d2 silence
+
+d3 silence
+
+d6 silence
+
+hush

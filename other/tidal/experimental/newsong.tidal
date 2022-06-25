@@ -1,0 +1,70 @@
+setcps(140/60/4)
+
+d1
+  $ every 4 (rev)
+  $ every 4 (fast 2)
+  $ every 12 (slow 2)
+  $ every 12 (fast 4)
+  $ every 24 (fast 8)
+  $ every 36 (fast 12)
+  $ cat [
+    n "<~ [d5, df5, c6]>",
+    n "~ [f4, cf5, cs7]",
+    n "<[c2, cf4, es7] ~>",
+    n "[g3, cs5, es9]"
+  ]
+  # s "supersquare"
+  # velocity (rand)
+  # sustain "2"
+  # room "2"
+  # size "0.9"
+  # dry "0.3"
+
+d2
+  $ cat [
+    n "c1",
+    n "[c1*2 c1*3]",
+    n "c1",
+    n "[c1*2 c1*3]"
+  ]
+  # s "super808"
+  # distort "0.2"
+  # gain "1.3"
+
+d3
+  $ cat [
+    n "[c7 c8*2 c9*2 c10*4]",
+    n "~ ~ c1 ~",
+    n "[c7 c8*2 c9*2 c10*4]",
+    n "c1*6"
+  ]
+  # s "supersnare"
+  # distort "0.2"
+  # gain "1"
+  # pan (rand)
+
+d4
+  $ cat [
+    n "[c7 c7*3 ~ c7*4]",
+    n "[c7 c7*3 ~ c7*2]",
+    n "[c7 c7*3 ~ c7*4]",
+    n "[c7 c7*3 ~ c7*2]"
+  ]
+  # s "superhat"
+  # distort "0.2"
+  # gain "1"
+  # pan (rand)
+
+d3
+  $ cat [
+    n "c7*16 c7*6",
+    n "c7*16"
+  ]
+  # s "superhat"
+  # gain (rand)
+  # delay "0.5"
+  # delayt "0.5"
+  # delayfb "0.4"
+  # pan (sine)
+
+hush

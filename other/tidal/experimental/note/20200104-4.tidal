@@ -1,0 +1,13 @@
+d1 $ sound "bd sd:1"
+
+d2 $ sound "hh*4"
+
+d3 $ sound "arpy"
+
+d4 $ sound "bass3*4"
+
+p "drum" $ sound "bd sd:1"
+
+p "bass" $ sound "bass3*4"
+
+hush

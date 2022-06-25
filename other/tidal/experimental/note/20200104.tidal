@@ -1,0 +1,10 @@
+d1 $ s "bd"
+
+d1 $ s "bd bd bd bd"
+
+d1 $ s "bd*4"
+
+d1 $ s "bd cp"
+
+
+hush

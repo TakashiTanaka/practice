@@ -1,0 +1,7 @@
+d1 $ s "bd bd bd bd"
+
+d1 $ s "bd bd ~ bd"
+
+d1 $ s "bd bd ~ cp bd ~ bd hh"
+
+hush

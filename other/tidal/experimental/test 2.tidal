@@ -1,0 +1,25 @@
+setcps (120/60/4)
+
+d1
+-- $ every 2 (rev)
+$ sometimesBy 0.1 (fast 2)
+$ stack [
+  sound "amencutup(8, 32, 3)"
+]
+# n (irand 64)
+# pan (rand)
+# resonance "0.5"
+# distort (0.2)
+-- # leslie (1) --dry or wet
+-- # crush (64) --bit crush!
+-- # phaserdepth (2)
+-- # lpf (1000) --low pass filter
+-- # octer (1.2) --octave
+-- # ring (2)
+-- # ringf (100)
+-- # ringdf (8000)
+
+d1 silence
+
+
+hush

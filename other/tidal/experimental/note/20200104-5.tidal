@@ -1,0 +1,21 @@
+d1 $ sound "bd cp"
+
+d1 $ sound "[bd bd bd bd] cp"
+
+d1 $ sound "[bd sd sd] cp"
+
+d1 $ sound "bd [sd sd]"
+
+d1 $ sound "bd [sd sd sd]"
+
+d1 $ sound "bd [sd sd sd sd]"
+
+d1 $ sound "[bd bd] [sd sd sd sd]"
+
+d1 $ sound "[bd bd bd] [sd sd]"
+
+d1 $ sound "[bd bd bd bd] [sd]"
+
+d1 $ sound "[bd bd] [bd [sd [sd sd] sd] sd]"
+
+hush

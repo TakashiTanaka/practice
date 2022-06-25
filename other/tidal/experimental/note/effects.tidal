@@ -1,0 +1,45 @@
+d1
+  $ sound "hh"
+  # delay "0.5"
+  # delayt "0.2"
+  # delayfb "0.7"
+
+d1
+  $ sound "hh*16"
+  # leslie "1"
+  # lrate "0.7"
+  # lsize "1"
+
+d1
+  $ sound "hh"
+  # room "1"
+  # size "0.9"
+  # dry "0.5"
+
+d1
+  $ sound "bd"
+  # crush "2"
+
+d1
+  $ sound "superpiano*4"
+  # legato "1"
+
+d1
+  $ s "superpiano"
+  # tremdp "1"
+  # tremr "10"
+
+d1
+  $ s "superpiano"
+  # shape "0.7"
+
+d1
+  $ s "superpiano"
+  # coarse "0.4"
+
+d1
+  $ s "<supersquare*8 supersquare*16 supersquare*5 supersquare*4>"
+  # n (irand 16)
+  # distort "16"
+
+hush

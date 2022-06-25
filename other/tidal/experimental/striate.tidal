@@ -1,0 +1,26 @@
+--単純マルチトラック構造
+
+setcps(160/60/4)
+
+d1
+  $ every 4 (slow 2)
+  $ sound "alphabet*8"
+  # n (irand 26)
+  # gain "0.6"
+  # pan (rand)
+  # speed "1.0"
+
+d2
+  $ s "amencutup(7,8,5)"
+  # n (irand 50)
+
+d3
+  $ sound "Superclap"
+
+d1 silence
+
+d2 silence
+
+d3 silence 
+
+hush

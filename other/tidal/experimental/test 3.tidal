@@ -1,0 +1,28 @@
+--単純マルチトラック構造
+
+setcps(60/60/4)
+
+do
+  let
+    p1 = "[1 0 1 0 1 0 1 0]"
+    p2 = ""
+    p3 = "[0 0 1 0]*2"
+    p4 = "[0 1 0 1 0 1 0 1]"
+  d1
+    $ gain p1
+    # s "dr:9"
+  d2
+    $ gain p2
+    # s "bd"
+  d3
+    $ gain p3
+    # s "sn:2"
+
+d1 silence
+
+d2 silence
+
+d3 silence
+
+
+hush

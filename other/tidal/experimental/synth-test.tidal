@@ -1,0 +1,20 @@
+--単純マルチトラック構造
+
+setcps(60/60/4)
+
+d1
+  $ every 3 (|+| speed "0.8")
+  $ striate 128 (sound "breaks152")
+
+  -- $ every 3 (rev) $ striate 128 (sound "breaks152")
+  -- $ every 4 (0.5 <~)
+  -- $ every 3 (0.25 <~)
+  -- $ every 2 (0.125 <~) $ striate 32 (sound "breaks152")
+
+d1 silence
+
+-- sinewaveというfunctionが良い感じだったが記述方法変わった？
+-- https://www.youtube.com/watch?v=plu04_ewZUQ&list=PLKgxw7RG3hcRHyBFsPr5opr1iu8wbNIgP&index=20&t=131s
+
+
+hush

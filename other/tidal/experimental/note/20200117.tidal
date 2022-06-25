@@ -1,0 +1,13 @@
+d1 $ s "bd*4"
+
+d1 (s "bd*4")
+
+d1 $ every 4(fast 2) $ s "bd*4"
+
+d1 ((every 4(fast 2)) (s "bd*4"))
+
+d1 $ fast 2 (s "bd*4")
+
+d1 (fast 2 (s "bd*4"))
+
+hush
