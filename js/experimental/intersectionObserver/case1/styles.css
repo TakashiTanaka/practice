@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: #0055ee;
+  color: white;
+  height: 200px;
+}
+
+.footer {
+  background: red;
+  color: white;
+  height: 200px;
+}
+
+.box {
+  color: white;
+  display: block;
+  height: 50vh;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.box--gray {
+  background: gray;
+}
+
+.btn {
+  bottom: 24px;
+  opacity: 0;
+  position: fixed;
+  right: 24px;
+}
+
+.btn.appear {
+  opacity: 1;
+  transform: translateX(0%);
+}
