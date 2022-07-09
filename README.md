@@ -14,6 +14,7 @@
 - [js](./js/)
 - [other](./other/)
 - [php](./php/)
+- [pure-data](./pure-data/)
 - [ruby](./ruby/)
 - [selenium-webdriver](./selenium-webdriver/)
 - [story-book](./story-book/)
