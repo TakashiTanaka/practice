@@ -3,44 +3,39 @@
 ドットインストールで紹介されていた、  
 PHP基礎文法編を実践しました。
 
-## 参考URL  
-https://dotinstall.com/lessons/basic_php_grammer
+## 参考
 
-### PHP_EOLはブラウザ上では反映されない！！
-```
+<https://dotinstall.com/lessons/basic_php_grammer>
+
+### PHP_EOLはブラウザ上では反映されない
+
+```php:index.php
 echo 'hello!' . PHP_EOL;
 echo 'hihi!' . PHP_EOL;
 ```
 
-### comment
-```
-\# comment
-
-/*
-複数行のcomment
-複数行のcomment
-複数行のcomment
-*/
-```
-
 ### 変数代入
-```
+
+```php:index.php
 $name = 'myname';
 echo $name;
 ```
 
 ### ""内だったら変数を勝手に展開してくれる
-```
+
+```php:index.php
 echo "my name is $name";
 ```
 
 ### ""内で""を使いたい場合は\でエスケープしてあげる
-```
+
+```php
 echo "my \"name\" is $name";
 ```
 
 ### nowdoc, heredocを使えば複数行のテキストが楽にかける  EOTの所は別に他の識別子でも良い  変数展開できない方がnowdoc, できる方がheredoc
-```
+
+```php
 $name = 'ぽち';
 $text = <<<EOT
 hello!<br>
@@ -52,7 +47,8 @@ print $text;
 ```
 
 ### 型
-```
+
+```php
 $a = 'hello'; // string
 $b = 10; // int
 $c = -1.3; //float
@@ -61,7 +57,8 @@ $e = true; //bool
 ```
 
 ### var_dumpで型と値を表示できる
-```
+
+```php
 var_dump($a);
 var_dump($b);
 var_dump($c);

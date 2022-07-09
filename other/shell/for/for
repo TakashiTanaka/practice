@@ -1,0 +1,11 @@
+#! /bin/bash
+
+# 番号を順番に出力
+# for num in 1 2 3; do
+# 	echo $num
+# done
+
+# 引数を順番に出力
+for arg in $@; do
+	echo $arg
+done
