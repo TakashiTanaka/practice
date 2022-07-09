@@ -1,0 +1,23 @@
+{
+  "name": "case1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@unibeautify/beautifier-prettydiff": "^0.6.0",
+    "gulp": "^4.0.2",
+    "gulp-prettydiff": "^2.0.0",
+    "prettydiff2": "^2.2.8",
+    "unibeautify": "^0.17.1",
+    "unibeautify-cli": "^0.2.1"
+  },
+  "dependencies": {
+    "prettydiff": "^101.2.6"
+  }
+}

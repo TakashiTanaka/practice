@@ -1,0 +1,16 @@
+{
+  "Twig": {
+    "indent_comments": true,
+    "indent_style": "space",
+    "indent_size": 2,
+    "max_preserve_newlines": 10,
+    "quotes": "none",
+    "wrap_line_length": 80,
+    "end_with_comma": false,
+    "space_after_anon_function": false,
+    "break_chained_methods": false,
+    "multiline_ternary": "always",
+    "align_assignments": false,
+    "beautifiers": ["Pretty Diff"]
+  }
+}
