@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <div>
+      {% include('components/parts.html.twig') with { foo: 42 } %}
+			{% if true %}
+        <h1>{{ message }}</h1>
+			{% endif %}
+    </div>
+  </body>
+</html>
