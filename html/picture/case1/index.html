@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pictureタグのテスト</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>pictureタグのテスト</h1>
+    <p>画像を切り替える、アートディレクション的な使い方</p>
+    <picture>
+      <source srcset="./pic2.jpg" media="(min-width: 800px)" />
+      <source srcset="./pic3.jpg" media="(min-width: 600px)" />
+      <img src="./pic1.jpg" alt="pictureタグのテスト" />
+    </picture>
+    <p>type属性で対応しているブラウザごとに表示するファイルを変える使い方</p>
+    <p>画面幅や解像度によって画像を切り替える使い方</p>
+
+    <p>
+      srcsetの記述子はwとx。wは画像の実際の幅を指定する。sizesで表示する幅を指定
+    </p>
+    <!-- <img
+      srcset="./pic1.jpg 360w, ./pic2.jpg 600w, ./pic3.jpg 800w"
+      sizes="(max-width: 320px) 280px,(max-width: 480px) 440px,800px"
+      src="default-image.png"
+    /> -->
+    <ul>
+      <li>画像の解像度の切り替え -> imgのsrcset</li>
+      <li>アートディレクション -> pictureタグ</li>
+      <li>
+        アートディレクションと画像解像度の切り替え ->
+        pictureタグとsrcsetのあわせ技
+      </li>
+    </ul>
+  </body>
+</html>
