@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 10%;
+}
+
+.ac-trigger.ac-trigger--overwrite {
+  appearance: none;
+  background: #000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.ac-trigger.ac-trigger--overwrite:after {
+  content: '';
+}
+
+.ac-trigger.ac-trigger--overwrite:focus {
+  color: #fff;
+}
+
+nav {
+  border: solid #000;
+  border-width: 0 5px 5px 5px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid #000;
+  border-collapse: collapse;
+  padding: 0.5em;
+}
+
+li:last-child {
+  border-bottom: none;
+}

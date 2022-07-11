@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 10%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background: blue;
+  display: block;
+}
+
+button {
+  appearance: none;
+  background: #000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5em;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 0.5em;
+}
+
+li + li {
+  border-top: none;
+}

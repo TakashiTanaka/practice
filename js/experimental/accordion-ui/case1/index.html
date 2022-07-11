@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQueryを使った実装</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <h1>jQueryを使ってアコーディオンUIを作成</h1>
+    <hr />
+    <section>
+      <h2>階層無し</h2>
+      <button class="trigger">メニューを表示</button>
+      <ul>
+        <li>アイテム1</li>
+        <li>アイテム2</li>
+        <li>アイテム3</li>
+      </ul>
+    </section>
+    <hr />
+
+    <section>
+      <h2>階層有り</h2>
+      <button class="trigger">メニューを表示</button>
+      <ul>
+        <li class="list-item"><a href="">Child 1</a></li>
+        <li class="list-item">
+          <p class="trigger">Child 2</p>
+          <ul style="display: none">
+            <li>Grandchild 1</li>
+            <li>Grandchild 2</li>
+            <li>Grandchild 3</li>
+          </ul>
+        </li>
+        <li class="list-item">Child 3</li>
+      </ul>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
