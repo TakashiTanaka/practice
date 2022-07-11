@@ -11,5 +11,8 @@
 - [case9 縦に並べるグリッド](./case9/index.html)
 - [case10 縦に並べて親要素の幅に応じて可変](./case10/index.html)
 
+## IE11に対応するにはautoprefixerを使い、オプションでgridにtrueを指定する
+
 ## 参考サイト
+
 [グリッド \- ウェブ開発を学ぶ \| MDN](https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Grids)

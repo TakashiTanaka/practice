@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: lightsteelblue;
+  display: grid;
+  /* grid-auto-flowをcolumnにすると縦に並ぶ */
+  grid-auto-flow: column;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.item {
+  border: 1px solid #000;
+  text-align: center;
+}

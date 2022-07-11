@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: lightsteelblue;
+  display: grid;
+  grid-auto-columns: auto;
+  /* grid-auto-flowをcolumnにすると縦に並ぶ */
+  grid-auto-flow: column;
+  grid-template-rows: repeat(auto-fit, minmax(100px, -webkit-min-content));
+  grid-template-rows: repeat(auto-fit, minmax(100px, min-content));
+  /* ここで高さを設定しないとauto-fitしてくれない */
+  height: 100vh;
+}
+
+.item {
+  border: 1px solid #000;
+  text-align: center;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFNBQVM7RUFDVCxVQUFVO0FBQ1o7O0FBRUE7RUFDRSxnQ0FBZ0M7RUFDaEMsYUFBYTtFQUNiLHVCQUF1QjtFQUN2QixrQ0FBa0M7RUFDbEMsc0JBQXNCO0VBQ3RCLHdFQUF3RTtFQUN4RSxnRUFBZ0U7RUFDaEUsK0JBQStCO0VBQy9CLGFBQWE7QUFDZjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QixrQkFBa0I7QUFDcEIiLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZzogMDtcbn1cblxuLmNvbnRhaW5lciB7XG4gIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0c3RlZWxibHVlO1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLWF1dG8tY29sdW1uczogYXV0bztcbiAgLyogZ3JpZC1hdXRvLWZsb3fjgpJjb2x1bW7jgavjgZnjgovjgajnuKbjgavkuKbjgbYgKi9cbiAgZ3JpZC1hdXRvLWZsb3c6IGNvbHVtbjtcbiAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiByZXBlYXQoYXV0by1maXQsIG1pbm1heCgxMDBweCwgLXdlYmtpdC1taW4tY29udGVudCkpO1xuICBncmlkLXRlbXBsYXRlLXJvd3M6IHJlcGVhdChhdXRvLWZpdCwgbWlubWF4KDEwMHB4LCBtaW4tY29udGVudCkpO1xuICAvKiDjgZPjgZPjgafpq5jjgZXjgpLoqK3lrprjgZfjgarjgYTjgahhdXRvLWZpdOOBl+OBpuOBj+OCjOOBquOBhCAqL1xuICBoZWlnaHQ6IDEwMHZoO1xufVxuXG4uaXRlbSB7XG4gIGJvcmRlcjogMXB4IHNvbGlkICMwMDA7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbiJdfQ== */
