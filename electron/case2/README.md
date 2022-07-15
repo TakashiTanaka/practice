@@ -1,4 +1,4 @@
-# case2 テキストエディタを作ってみる
+# プロセスの理解
 
 ## それぞれのプロセスの役割
 
@@ -17,7 +17,8 @@ Node.js環境で動作。主な目的は`BrowserWindow`モジュールでアプ�
 
 ## コンテキストの分離
 
-プリロードスクリプトとElectronの内部ロジックの両方がwebContentsでロードしたウェブサイトに対して別のコンテキストで実行されることを保証する機能。
+プリロードスクリプトとElectronの内部ロジックの両方が
+webContentsでロードしたウェブサイトに対して別のコンテキストで実行されることを保証する機能。
 なぜ分離する必要があるかというと、セキュリティ的な問題
 
 ## コンテキストの分離が有効の時、プリロードスクリプトからレンダラープロセスにAPIを安全に公開する
@@ -56,8 +57,8 @@ window.myAPI.doAThing()
 
 ## メインからレンダラーへ（片方向）
 
-
 ## 参考
 
 <https://www.electronjs.org/ja/docs/latest/tutorial/process-model>
 
+[プロセスモデル \| Electron](https://www.electronjs.org/ja/docs/latest/tutorial/process-model)
