@@ -1,20 +1,11 @@
 # Dockerのテスト
 
-## 基本
-
-- サーバーを立ち上げる
-  - Dockerfileを編集する
-
-    ```yml
-    RUN yum install -y httpd
-    ADD ./index.html /var/www/html
-    EXPOSE 80
-    CMD [ "/usr/sbin/httpd", "-D", "FOREGROUND"]
-    ```
-
-	- これで`sudo docker build -t image名 .`でbuildして、`sudo docker run -p 8080:80 -d image名`とする。
-
-	- `http://localhost:8080/`にアクセスすると、無事表示されるはず
-
-- imageをDocker Hubにpushする
-	- docker indexにsign upする
+- [WordPress環境を作るテスト](./case1/)
+- [ドットインストールを参考にDockerfile作成](./case2/)
+- [本を参考にdocker-composeファイルを作成](./case3/)
+- [dockerでhttps開発環境を作るテスト](./case4/)
+- [dockerでhttps開発環境を作るテスト2](./case5/)
+- [カスタムしたイメージを作る](./case6/)
+- [カスタムしたイメージを作る（失敗例）](./case7/)
+- [カスタムしたイメージを作る（Dockerfileとdocekr buildで作る）](./case8/)
+- [case8で作ったイメージでコンテナ作成](./case9/)
